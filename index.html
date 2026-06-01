@@ -29,11 +29,22 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
   padding: 18px 24px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
 }
 
+.nav-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-self: center;
+}
+
+.language-switch {
+  justify-self: end;
+}
+    
 .logo {
   font-family: 'Bodoni Moda', serif;
   font-size: 22px;
@@ -50,7 +61,7 @@ nav {
 .nav-links a {
   font-family: Avenir, sans-serif;
   text-decoration: none;
-  color: #2f2a25;
+  color: #4d4d4d;
   font-size: 14px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -59,12 +70,23 @@ nav {
 .nav-links a:hover {
   color: #8b4a32;
 }
+.language-switch {
+  font-family: Avenir, sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
 
+.language-switch a {
+  text-decoration: none;
+  color: #4d4d4d;
+  margin: 0 4px;
+}
+    
     body {
       margin: 0;
       font-family: Avenir, sans-serif;
       background: #f7f1e8;
-      color: #2f2a25;
+      color: ##4d4d4d;
     }
 
     header {
@@ -101,9 +123,11 @@ h1 {
   letter-spacing: 1px;
 }
   .subtitle {
-  font-family: Avenir, sans-serif;
-  font-size: 24px;
-  letter-spacing: 2px;
+  font-family: 'Bodoni Moda', serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 1px;
   margin-top: 32px;
 }
 
@@ -112,7 +136,7 @@ h1 {
   font-size: 15px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin-top: 18px;
+  margin-top: 22px;
   color: #f3d6c1;
 }
 
@@ -183,6 +207,7 @@ h2 {
   
 <nav>
   <div class="nav-container">
+
     <div class="logo">M & S</div>
 
     <div class="nav-links">
@@ -192,11 +217,17 @@ h2 {
       <a href="#explore">Explore</a>
       <a href="#rsvp">RSVP</a>
       <a href="#faq">FAQ</a>
-      <a href="#">EN</a>
-      <a href="#">ES</a>
     </div>
+
+   <div class="language-switch">
+  <a href="#">EN</a>
+  <span>|</span>
+  <a href="#">ES</a>
+</div>
+
   </div>
 </nav>
+  
   <header>
     <div class="hero-content">
       <div class="eyebrow">Wedding Weekend</div>
