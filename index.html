@@ -4,11 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marije & Sophia | Sacred Valley, Peru</title>
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
   <style>
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(247, 241, 232, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  border-bottom: 1px solid #e6d8c8;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: #7a2f32;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2f2a25;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  color: #8b4a32;
+}
+
     body {
       margin: 0;
-      font-family: Georgia, serif;
+      font-family: 'Inter', sans-serif;
       background: #f7f1e8;
       color: #2f2a25;
     }
@@ -40,6 +92,7 @@
     }
 
     h1 {
+      font-family: 'Cormorant Garamond', serif;
       font-size: clamp(48px, 10vw, 110px);
       font-weight: normal;
       margin: 0;
@@ -76,6 +129,7 @@
     }
 
     h2 {
+      font-family: 'Cormorant Garamond', serif;
       font-size: 42px;
       font-weight: normal;
       color: #7a2f32;
@@ -117,7 +171,23 @@
 </head>
 
 <body>
+  
+<nav>
+  <div class="nav-container">
+    <div class="logo">M & S</div>
 
+    <div class="nav-links">
+      <a href="#weekend">Weekend</a>
+      <a href="#stay">Stay</a>
+      <a href="#events">Events</a>
+      <a href="#explore">Explore</a>
+      <a href="#rsvp">RSVP</a>
+      <a href="#faq">FAQ</a>
+      <a href="#">EN</a>
+      <a href="#">ES</a>
+    </div>
+  </div>
+</nav>
   <header>
     <div class="hero-content">
       <div class="eyebrow">Wedding Weekend</div>
@@ -137,8 +207,8 @@
     </p>
   </section>
 
-  <section>
-    <h2>The Weekend</h2>
+  <section id="weekend">
+  <h2>The Weekend</h2>
 
     <div class="cards">
       <div class="card">
@@ -158,16 +228,23 @@
     </div>
   </section>
 
-  <section>
-    <h2>Stay & Travel</h2>
+  <section id="stay">
+  <h2>Stay & Travel</h2>
     <p>
       We will share recommended hotels, arrival guidance, transportation information, and practical
       travel tips to help you plan your stay in Peru.
     </p>
   </section>
 
-  <section>
-    <h2>Explore</h2>
+  <section id="events">
+  <h2>Events</h2>
+  <p>
+    Detailed information for the welcome event, wedding day, and farewell brunch will be added here soon.
+  </p>
+</section>
+  
+  <section id="explore">
+  <h2>Explore</h2>
     <p>
       Our curated guide to the Sacred Valley will include favorite restaurants, local experiences,
       and places worth visiting during your trip.
@@ -181,6 +258,13 @@
     </p>
   </section>
 
+  <section id="faq">
+  <h2>FAQ</h2>
+  <p>
+    Frequently asked questions will be added here soon.
+  </p>
+</section>
+  
   <footer>
     Marije & Sophia · Sacred Valley, Peru · 18–20 June 2027
   </footer>
