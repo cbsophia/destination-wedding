@@ -1,15 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Our Wedding in Peru</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marije & Sophia | Sacred Valley, Peru</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background: #f7f1e8;
+      color: #2f2a25;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+      background:
+        linear-gradient(rgba(47, 42, 37, 0.35), rgba(47, 42, 37, 0.35)),
+        url("https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      color: #fffaf2;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 10vw, 110px);
+      font-weight: normal;
+      margin: 0;
+      line-height: 1;
+    }
+
+    .subtitle {
+      font-size: 22px;
+      margin-top: 28px;
+    }
+
+    .date {
+      font-size: 18px;
+      margin-top: 12px;
+      color: #f3d6c1;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 36px;
+      padding: 14px 28px;
+      border: 1px solid #fffaf2;
+      color: #fffaf2;
+      text-decoration: none;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    section {
+      padding: 90px 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 42px;
+      font-weight: normal;
+      color: #7a2f32;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #fffaf2;
+      padding: 28px;
+      border: 1px solid #e6d8c8;
+    }
+
+    .card h3 {
+      color: #8b4a32;
+      font-size: 24px;
+      font-weight: normal;
+      margin-top: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      background: #6f7d5c;
+      color: #fffaf2;
+    }
+  </style>
 </head>
+
 <body>
 
-    <h1>Welcome to Our Wedding Weekend</h1>
+  <header>
+    <div class="hero-content">
+      <div class="eyebrow">Wedding Weekend</div>
+      <h1>Marije & Sophia</h1>
+      <div class="subtitle">Sacred Valley, Peru</div>
+      <div class="date">18–20 June 2027</div>
+      <a class="button" href="#rsvp">RSVP</a>
+    </div>
+  </header>
 
+  <section>
+    <h2>Welcome</h2>
     <p>
-        We can't wait to celebrate with you in Peru.
+      We are so excited to celebrate our wedding weekend with you in the Sacred Valley of Peru.
+      This website will be your guide for the weekend: where to stay, how to travel, what to wear,
+      and what to expect during our three days together.
     </p>
+  </section>
+
+  <section>
+    <h2>The Weekend</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Welcome Event</h3>
+        <p>An intimate evening to gather, arrive, and begin the celebration.</p>
+      </div>
+
+      <div class="card">
+        <h3>Wedding Day</h3>
+        <p>Our ceremony, dinner, and party surrounded by the mountains of the Sacred Valley.</p>
+      </div>
+
+      <div class="card">
+        <h3>Brunch</h3>
+        <p>A relaxed farewell brunch before everyone continues their journey.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Stay & Travel</h2>
+    <p>
+      We will share recommended hotels, arrival guidance, transportation information, and practical
+      travel tips to help you plan your stay in Peru.
+    </p>
+  </section>
+
+  <section>
+    <h2>Explore</h2>
+    <p>
+      Our curated guide to the Sacred Valley will include favorite restaurants, local experiences,
+      and places worth visiting during your trip.
+    </p>
+  </section>
+
+  <section id="rsvp">
+    <h2>RSVP</h2>
+    <p>
+      RSVP details will be added here soon.
+    </p>
+  </section>
+
+  <footer>
+    Marije & Sophia · Sacred Valley, Peru · 18–20 June 2027
+  </footer>
 
 </body>
 </html>
