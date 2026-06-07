@@ -154,7 +154,7 @@ h1 {
 }
 
    section {
-  padding: 90px 24px;
+  padding: 120px 24px;
   max-width: 1000px;
   margin: 0 auto;
   clear: both;
@@ -174,12 +174,12 @@ h2 {
   line-height: 1.7;
   color: #4d4d4d;
 }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
-      margin-top: 40px;
-    }
+   .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
 
    .card {
   background: #fffaf2;
@@ -223,13 +223,44 @@ h2 {
   background: #8b4a32;
   transform: translateY(-3px);
 }
-    
+
+    .section-divider {
+  border-top: 1px solid #e6d8c8;
+  padding-top: 120px;
+}
+
     footer {
       text-align: center;
       padding: 40px;
       background: #8a9681;
       color: #fffaf2;
     }
+
+@media (max-width: 800px) {
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    white-space: normal;
+  }
+
+  .nav-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .language-switch {
+    justify-self: center;
+  }
+
+}
   </style>
 </head>
 
@@ -246,6 +277,7 @@ h2 {
 <a href="#explore">Explore Peru</a>
 <a href="#rsvp">RSVP</a>
 <a href="#faq">FAQ</a>
+</div>
 
    <div class="language-switch">
   <a href="#">EN</a>
@@ -352,34 +384,43 @@ h2 {
   </p>
 </section>
 
-   <section id="travel">
+   <section id="travel" class="section-divider">
   <h2>Travel Information</h2>
 
   <p>
     We will be sharing practical travel information to help make your journey as smooth as possible.
   </p>
 
-  <div class="cards">
+<div class="cards">
 
-    <div class="card">
-      <h3>Flying to Peru</h3>
-      <p>Recommended routes, airports, and travel planning advice.</p>
-    </div>
-
-    <div class="card">
-      <h3>Lima</h3>
-      <p>Our favorite recommendations for anyone spending time in Peru's capital city.</p>
-    </div>
-
-    <div class="card">
-      <h3>Cusco & Altitude</h3>
-      <p>Important information about altitude, acclimatization, and arriving in the Sacred Valley.</p>
-    </div>
-
+  <div class="card">
+    <h3>Flying to Peru</h3>
+    <p>
+      Most international guests will arrive in Lima, Peru's main international airport.
+      From there, a short domestic flight will bring you to Cusco, the gateway to the Sacred Valley.
+    </p>
   </div>
+
+  <div class="card">
+    <h3>Arriving in Cusco</h3>
+    <p>
+      Cusco sits at over 3,300 meters (11,000 feet) above sea level. Many travelers choose to
+      head directly to the Sacred Valley after landing, where the lower altitude makes acclimatization easier.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Altitude & Acclimatization</h3>
+    <p>
+      Drink plenty of water, take it easy on your first day, and don't be surprised if you feel a little slower than usual.
+      Most visitors adjust quickly and have no trouble enjoying their trip.
+    </p>
+  </div>
+
+</div>
 </section>
     
- <section id="explore">
+<section id="explore" class="section-divider">
   <h2>Explore Peru</h2>
 
   <p>
