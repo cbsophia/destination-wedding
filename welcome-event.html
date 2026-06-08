@@ -41,6 +41,30 @@ h1 {
   margin-bottom: 40px;
 }
 
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin: 40px 0 60px;
+  border-top: 1px solid #d8c4b3;
+  border-bottom: 1px solid #d8c4b3;
+  padding: 28px 0;
+}
+
+.details-grid span {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8a9681;
+  margin-bottom: 8px;
+}
+
+.details-grid p {
+  margin: 0;
+  font-size: 16px;
+}
+
 h2 {
   font-family: 'Bodoni Moda', serif;
   color: #9c5a3c;
@@ -86,6 +110,30 @@ p, li {
 
 <div class="event-date">
   Friday, 18 June 2027
+</div>
+
+<div class="details-grid">
+
+  <div>
+    <span>Date</span>
+    <p>Friday, 18 June 2027</p>
+  </div>
+
+  <div>
+    <span>Location</span>
+    <p>Surprise mountain setting</p>
+  </div>
+
+  <div>
+    <span>Transportation</span>
+    <p>Provided from the hotel</p>
+  </div>
+
+  <div>
+    <span>Dress Code</span>
+    <p>Mountain Chic</p>
+  </div>
+
 </div>
 
   <p>
