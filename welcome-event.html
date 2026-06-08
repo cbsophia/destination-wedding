@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   background: #f7f1e8;
@@ -14,21 +16,16 @@ body {
 h1 {
   font-family: 'Bodoni Moda', serif;
   font-size: 64px;
-  font-weight: 400;
   color: #9c5a3c;
-  margin-bottom: 24px;
 }
 
 h2 {
   font-family: 'Bodoni Moda', serif;
-  font-size: 36px;
-  font-weight: 400;
   color: #9c5a3c;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
-p,
-li {
+p, li {
   font-size: 18px;
   line-height: 1.8;
 }
@@ -37,7 +34,6 @@ li {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-  margin-top: 32px;
 }
 
 .placeholder {
@@ -48,19 +44,44 @@ li {
   align-items: center;
   justify-content: center;
   color: #8b4a32;
-  font-family: 'Bodoni Moda', serif;
-  font-size: 24px;
 }
 
 .back-link {
   display: inline-block;
-  margin-top: 60px;
+  margin-top: 50px;
   color: #9c5a3c;
   text-decoration: none;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-size: 14px;
 }
+
+</style>
+</head>
+
+<body>
+
+Then go to the very bottom of the file and add:
+
+</body>
+</html>
+
+So your file should look like:
+
+<!DOCTYPE html>
+<html>
+<head>
+...
+</head>
+<body>
+
+<div class="container">
+
+... all your Welcome Event content ...
+
+</div>
+
+</body>
+</html>
+
+Save (Ctrl + S) and refresh the page in Chrome. It should immediately look much more like part of your website.
 
 <div class="container">
 
@@ -112,3 +133,6 @@ li {
 ← Back to Wedding Website</a>
 
 </div>
+
+</body>
+</html>
