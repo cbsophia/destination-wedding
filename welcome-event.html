@@ -117,6 +117,36 @@ p, li {
   justify-content: center;
   color: #8b4a32;
 }
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 28px;
+}
+
+.tip-card {
+  background: #fbf6ef;
+  border: 1px solid #d8c4b3;
+  padding: 28px;
+}
+
+.tip-card span {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 28px;
+  color: #8a9681;
+}
+
+.tip-card h3 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 24px;
+  color: #9c5a3c;
+  margin-bottom: 12px;
+}
+
+.tip-card p {
+  font-size: 16px;
+  line-height: 1.7;
+}
 
 .back-link {
   display: inline-block;
@@ -223,13 +253,27 @@ p, li {
 
 <h2>Practical Tips</h2>
 
-<ul>
-  <li>Bring a jacket, shawl, or warm layer for the evening.</li>
-  <li>The event takes place outdoors in the mountains.</li>
-  <li>Temperatures can drop significantly after sunset.</li>
-  <li>Comfortable footwear is recommended.</li>
-</ul>
+<div class="tips-grid">
 
+  <div class="tip-card">
+    <span>01</span>
+    <h3>Bring a Warm Layer</h3>
+    <p>Evenings in the mountains can cool down quickly after sunset.</p>
+  </div>
+
+  <div class="tip-card">
+    <span>02</span>
+    <h3>Outdoor Setting</h3>
+    <p>The event takes place outdoors, surrounded by mountain views.</p>
+  </div>
+
+  <div class="tip-card">
+    <span>03</span>
+    <h3>Comfortable Footwear</h3>
+    <p>Boots, flats, loafers, or comfortable shoes are recommended.</p>
+  </div>
+
+</div>
   <h2>Inspiration Gallery</h2>
 
   <div class="gallery">
