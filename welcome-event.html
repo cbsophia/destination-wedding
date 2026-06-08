@@ -1,3 +1,67 @@
+body {
+  margin: 0;
+  background: #f7f1e8;
+  color: #4d4d4d;
+  font-family: Avenir, sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 90px 24px;
+}
+
+h1 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 64px;
+  font-weight: 400;
+  color: #9c5a3c;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #9c5a3c;
+  margin-top: 60px;
+}
+
+p,
+li {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.placeholder {
+  height: 340px;
+  background: #eaded1;
+  border: 1px solid #d8c4b3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8b4a32;
+  font-family: 'Bodoni Moda', serif;
+  font-size: 24px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 60px;
+  color: #9c5a3c;
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
 <div class="container">
 
   <h1>Welcome Event</h1>
@@ -37,12 +101,14 @@
   <h2>Inspiration Gallery</h2>
 
   <div class="gallery">
-    <img src="welcome-look-1.jpg" alt="Welcome Event Inspiration">
-    <img src="welcome-look-2.jpg" alt="Welcome Event Inspiration">
-    <img src="welcome-look-3.jpg" alt="Welcome Event Inspiration">
-    <img src="welcome-look-4.jpg" alt="Welcome Event Inspiration">
-  </div>
+  <div class="placeholder">Inspiration Image</div>
+  <div class="placeholder">Inspiration Image</div>
+  <div class="placeholder">Inspiration Image</div>
+  <div class="placeholder">Inspiration Image</div>
+</div>
 
-  <a class="back-link" href="index.html">← Back to Wedding Website</a>
+  <a class="back-link" href="index.html">
+
+← Back to Wedding Website</a>
 
 </div>
