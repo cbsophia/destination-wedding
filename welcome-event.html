@@ -98,31 +98,34 @@ h1 {
 .details-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin: 50px 0;
+  margin: 40px 0 50px;
   border-top: 1px solid #d8c4b3;
   border-bottom: 1px solid #d8c4b3;
 }
 
 .detail-item {
-  padding: 26px 24px;
+  padding: 24px 28px;
 }
 
 .detail-item:not(:last-child) {
   border-right: 1px solid #d8c4b3;
 }
 
-.detail-item h3 {
-  font-family: Avenir, sans-serif;
-  font-size: 12px;
+.detail-item span {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
   letter-spacing: 4px;
-  font-weight: 600;
   text-transform: uppercase;
   color: #5D786E;
-  margin: 0 0 14px;
+  margin-bottom: 12px;
 }
 
 .detail-item p {
   margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #4f4f4f;
 }
 
 h2 {
