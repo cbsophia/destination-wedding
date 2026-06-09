@@ -169,9 +169,24 @@ p, li {
 }
 
 .gallery {
+  max-width: 1100px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.92) contrast(0.96);
+}
+
+.gallery img:nth-child(1),
+.gallery img:nth-child(4) {
+  height: 420px;
 }
 
 .placeholder {
@@ -183,6 +198,7 @@ p, li {
   justify-content: center;
   color: #8b4a32;
 }
+
 .tips-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -582,6 +598,16 @@ p, li {
   .detail-item:last-child {
     border-bottom: none;
   }
+
+.gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery img,
+  .gallery img:nth-child(1),
+  .gallery img:nth-child(4) {
+    height: 320px;
+  }
 }
 
 </style>
@@ -720,12 +746,16 @@ p, li {
 </div>
   <h2 class="gallery-title">Inspiration Gallery</h2>
 
-  <div class="gallery">
-    <div class="placeholder">Inspiration Image</div>
-    <div class="placeholder">Inspiration Image</div>
-    <div class="placeholder">Inspiration Image</div>
-    <div class="placeholder">Inspiration Image</div>
-  </div>
+ <div class="gallery">
+
+  <img src="images/welcome-inspiration-1.jpg" alt="Mountain chic inspiration">
+  <img src="images/welcome-inspiration-2.jpg" alt="Sacred Valley evening inspiration">
+  <img src="images/welcome-inspiration-3.jpg" alt="Outdoor dinner inspiration">
+  <img src="images/welcome-inspiration-4.jpg" alt="Earth tone dress code inspiration">
+  <img src="images/welcome-inspiration-5.jpg" alt="Andean landscape inspiration">
+  <img src="images/welcome-inspiration-6.jpg" alt="Welcome event atmosphere inspiration">
+
+</div>
 
 <a class="back-link" href="index.html">← Back to Wedding Website</a>
   </a>
