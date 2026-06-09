@@ -332,6 +332,69 @@ p, li {
   border-radius: 50%;
   border: 1px solid #d8c4b3;
 }
+.three-column-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  gap: 44px;
+  margin: 60px 0;
+  padding: 50px 0;
+  border-top: 1px solid #e6d8c8;
+  border-bottom: 1px solid #e6d8c8;
+}
+
+.info-column:not(:last-child) {
+  border-right: 1px solid #e6d8c8;
+  padding-right: 44px;
+}
+
+.info-column h2 {
+  margin-top: 0;
+}
+
+.info-column p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #5f5f5f;
+}
+
+.mini-tip {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.mini-tip img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+.mini-tip h3 {
+  font-family: Avenir, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 0 4px;
+}
+
+.mini-tip p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .three-column-section {
+    grid-template-columns: 1fr;
+  }
+
+  .info-column:not(:last-child) {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid #e6d8c8;
+    padding-bottom: 32px;
+  }
 
 </style>
 </head>
@@ -392,83 +455,63 @@ p, li {
 
 </div>
 
-<div class="content-section">
-<h2>Transportation</h2>
+<div class="three-column-section">
 
-<p>
-  Transportation will be provided for all guests staying at Sonesta Posadas del Inca Yucay.
-</p>
-
-<p>
-  Guests are kindly requested to gather in front of the hotel by 15:15 for departure.
-  The journey to the location takes approximately 25 minutes.
-</p>
-
-<p>
-  Return transportation to the hotel will also be provided at the end of the evening.
-</p>
-
-<div class="soft-block">
-
-  <h2>Dress Code</h2>
-
-  <p>
-    Mountain chic. Think relaxed elegance with an adventurous spirit. Think of the following color palette:
-  </p>
-
-  <div class="palette-strip">
-    <div style="background:#C6A27E;"></div>
-    <div style="background:#5D786E;"></div>
-    <div style="background:#B56A4C;"></div>
-    <div style="background:#D7CEC1;"></div>
-    <div style="background:#6E7153;"></div>
-    <div style="background:#5A4335;"></div>
+  <div class="info-column">
+    <h2>Transportation</h2>
+    <p>
+      Transportation will be provided for all guests staying at Sonesta Posadas del Inca Yucay.
+    </p>
+    <p>
+      Guests are kindly requested to gather in front of the hotel by 15:15 for departure.
+      The journey to the location takes approximately 25 minutes.
+    </p>
+    <p>
+      Return transportation to the hotel will also be provided at the end of the evening.
+    </p>
   </div>
 
-</div>
+  <div class="info-column">
+    <h2>Dress Code</h2>
+    <p>
+      Mountain chic. Think relaxed elegance with an adventurous spirit.
+    </p>
 
-<div class="soft-block">
+    <div class="palette-strip">
+      <div style="background:#C6A27E;"></div>
+      <div style="background:#5D786E;"></div>
+      <div style="background:#B56A4C;"></div>
+      <div style="background:#D7CEC1;"></div>
+      <div style="background:#6E7153;"></div>
+      <div style="background:#5A4335;"></div>
+    </div>
+  </div>
 
-<div class="practical-section">
+  <div class="info-column">
+    <h2>Practical Tips</h2>
 
-  <h2>Practical Tips</h2>
-
-  <div class="practical-layout">
-
-    <div class="vertical-line"></div>
-
-    <div class="practical-tips">
-
-      <div class="practical-tip">
-        <div class="tip-icon">
-          <img src="https://static.thenounproject.com/png/winter-icon-8189963-512.png" alt="Warm layer icon">
-        </div>
-        <div>
-          <h3>Warm Layers</h3>
-          <p>Evenings in the mountains can cool down quickly after sunset.</p>
-        </div>
+    <div class="mini-tip">
+      <img src="https://static.thenounproject.com/png/winter-icon-8189963-512.png" alt="">
+      <div>
+        <h3>Warm Layers</h3>
+        <p>Evenings in the mountains can cool down quickly after sunset.</p>
       </div>
+    </div>
 
-      <div class="practical-tip">
-        <div class="tip-icon">
-          <img src="https://static.thenounproject.com/png/8383431-200.png" alt="Mountain icon">
-        </div>
-        <div>
-          <h3>Outdoor Setting</h3>
-          <p>Celebrate beneath open skies and spectacular Andean views.</p>
-        </div>
+    <div class="mini-tip">
+      <img src="https://static.thenounproject.com/png/8383431-200.png" alt="">
+      <div>
+        <h3>Outdoor Setting</h3>
+        <p>Celebrate beneath open skies and spectacular Andean views.</p>
       </div>
+    </div>
 
-      <div class="practical-tip">
-        <div class="tip-icon">
-          <img src="https://static.thenounproject.com/png/boots-icon-8404248-512.png" alt="Boots icon">
-        </div>
-        <div>
-          <h3>Comfortable Footwear</h3>
-          <p>Choose shoes that allow you to move comfortably throughout the evening.</p>
-        </div>
+    <div class="mini-tip">
+      <img src="https://static.thenounproject.com/png/boots-icon-8404248-512.png" alt="">
+      <div>
+        <h3>Comfortable Footwear</h3>
+        <p>Choose shoes that allow you to move comfortably throughout the evening.</p>
       </div>
-
     </div>
 
   </div>
