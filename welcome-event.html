@@ -84,19 +84,19 @@ h1 {
 }
 
 .palette-strip {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 42px);
+  gap: 12px;
   justify-content: center;
-  gap: 14px;
   margin: 28px auto 20px;
-  max-width: 240px;
 }
 
 .palette-strip div {
-  width: 46px;
-  height: 46px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   border: 1px solid #d8c4b3;
+  box-sizing: border-box;
 }
 
 .content-section {
