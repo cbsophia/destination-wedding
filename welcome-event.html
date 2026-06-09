@@ -487,12 +487,18 @@ p, li {
 
 .detail-item {
   padding: 22px 24px;
-  border-right: 1px solid #d8c4b3;
+  position: relative;
   box-sizing: border-box;
 }
 
-.detail-item:last-child {
-  border-right: none;
+.detail-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  bottom: 22px;
+  right: 0;
+  width: 1px;
+  background: #d8c4b3;
 }
 
 .detail-item span {
