@@ -86,11 +86,6 @@ h1 {
   line-height: 1.45;
   text-align: center;
   color: #9c5a3c;
-
-  max-width: 900px;
-  margin: 0 auto;
-}
-
   max-width: 900px;
   margin: 0 auto;
 }
@@ -98,6 +93,7 @@ h1 {
 .details-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 0;
   margin: 40px 0 50px;
   border-top: 1px solid #d8c4b3;
   border-bottom: 1px solid #d8c4b3;
@@ -111,7 +107,7 @@ h1 {
   border-right: 1px solid #d8c4b3;
 }
 
-.detail-item span {
+.details-grid span {
   display: block;
   font-size: 11px;
   font-weight: 700;
@@ -121,7 +117,7 @@ h1 {
   margin-bottom: 12px;
 }
 
-.detail-item p {
+.details-grid p {
   margin: 0;
   font-size: 15px;
   line-height: 1.5;
