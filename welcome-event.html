@@ -566,43 +566,39 @@ p, li {
   margin-bottom: 36px;
 }
 
-@media (max-width: 800px) {
-  .three-column-section {
-    grid-template-columns: 1fr;
-    padding: 40px 24px;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  .info-column {
-    padding: 0 30px;
-  }
+.scroll-top {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #9c5a3c;
+  border-radius: 50%;
+  background: rgba(251, 248, 243, 0.92);
+  color: #9c5a3c;
+  text-decoration: none;
 
-  .info-column:not(:last-child) {
-    border-right: none;
-    border-bottom: 1px solid #e6d8c8;
-    padding-bottom: 32px;
-    margin-bottom: 32px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  .details-grid {
-    grid-template-columns: 1fr;
-  }
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
 
-  .detail-item {
-    border-right: none;
-    border-bottom: 1px solid #d8c4b3;
-  }
+  transition: all 0.25s ease;
+  z-index: 999;
+}
 
-  .detail-item:last-child {
-    border-bottom: none;
-  }
+.scroll-top:hover {
+  background: #9c5a3c;
+  color: #fbf8f3;
+}
 
-  .gallery {
-    column-count: 1;
-  }
-
-  .gallery img {
-    height: auto;
-  }
 @media (max-width: 800px) {
 
   body {
@@ -684,6 +680,9 @@ p, li {
   }
 
   .quote-section {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
     padding: 56px 28px 64px;
   }
 
@@ -696,6 +695,16 @@ p, li {
   .quote-section p::before,
   .quote-section p::after {
     font-size: 52px;
+  }
+
+  .quote-section p::before {
+    top: 14px;
+    margin-right: 6px;
+  }
+
+  .quote-section p::after {
+    top: 16px;
+    margin-left: 6px;
   }
 
   .three-column-section {
@@ -778,12 +787,20 @@ p, li {
   .back-link {
     margin: 54px auto 70px;
   }
+
+  .scroll-top {
+    right: 18px;
+    bottom: 18px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
 }
 
 </style>
 </head>
 
-<body>
+<body id="top">
 
 <div class="container">
 
@@ -945,7 +962,7 @@ p, li {
 <a class="back-link" href="index.html">← Back to Wedding Website</a>
   </a>
 
-</div>
+<a href="#top" class="scroll-top" aria-label="Back to top">↑</a>
 
 </body>
 </html>
