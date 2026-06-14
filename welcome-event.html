@@ -827,14 +827,18 @@ html {
   }
 
   .couple-photo-section {
-    max-width: 100%;
-    margin: 42px auto 54px;
-    padding: 0 24px;
-  }
+  max-width: 720px !important;
+  margin: 45px auto 60px !important;
+  padding: 0 40px !important;
+}
 
-  .couple-photo-section img {
-    height: 340px;
-  }
+.couple-photo-section img {
+  width: 100% !important;
+  height: 320px !important;
+  object-fit: cover !important;
+  display: block !important;
+  filter: grayscale(100%) contrast(0.95) brightness(1.03) !important;
+}
 
 html {
   scroll-behavior: smooth;
