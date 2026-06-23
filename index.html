@@ -156,38 +156,48 @@ h1 {
 .marquee {
   overflow: hidden;
   width: 100%;
-  background: #fbf8f3;
-  border-top: 1px solid #d8c4b3;
-  border-bottom: 1px solid #d8c4b3;
-  padding: 13px 0;
-  transform: rotate(-1deg) scale(1.03);
-  transform-origin: center;
-  margin: 8px 0 34px;
+  background: #f7f1e8;
+  padding: 62px 0 72px;
+  margin: 0;
 }
 
 .marquee-track {
   display: flex;
   width: max-content;
   align-items: center;
-  gap: 24px;
+  gap: 44px;
   animation: marqueeMove 34s linear infinite;
   white-space: nowrap;
 }
 
-.marquee span {
-  font-family: 'Inter', sans-serif;
-  font-size: 12px;
+.marquee-item {
+  display: inline-block;
+  font-family: 'Bodoni Moda', serif;
+  font-size: 30px;
+  font-weight: 500;
   font-style: normal;
-  font-weight: 400;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  letter-spacing: -0.02em;
   color: #9c5a3c;
 }
 
 .marquee-heart {
-  font-size: 12px !important;
+  display: inline-block;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 22px !important;
   color: #5D786E !important;
-  letter-spacing: 0 !important;
+  transform: rotate(-8deg) translateY(-5px);
+}
+
+.tilt-up {
+  transform: rotate(-10deg);
+}
+
+.tilt-down {
+  transform: rotate(7deg) translateY(-6px);
+}
+
+.tilt-soft {
+  transform: rotate(-4deg) translateY(4px);
 }
 
 @keyframes marqueeMove {
@@ -487,29 +497,31 @@ section.editorial-section .card p {
 
 <div class="marquee">
   <div class="marquee-track">
-    <span>We're getting married</span>
+
+    <span class="marquee-item tilt-up">We're getting married</span>
     <span class="marquee-heart">♥</span>
 
-    <span>We're getting married</span>
+    <span class="marquee-item tilt-down">We're getting married</span>
     <span class="marquee-heart">♥</span>
 
-    <span>We're getting married</span>
+    <span class="marquee-item tilt-soft">We're getting married</span>
     <span class="marquee-heart">♥</span>
 
-    <span>We're getting married</span>
+    <span class="marquee-item tilt-up">We're getting married</span>
     <span class="marquee-heart">♥</span>
 
-    <span>We're getting married</span>
+    <span class="marquee-item tilt-down">We're getting married</span>
     <span class="marquee-heart">♥</span>
 
-    <span>We're getting married</span>
+    <span class="marquee-item tilt-soft">We're getting married</span>
     <span class="marquee-heart">♥</span>
 
-    <span>We're getting married</span>
+    <span class="marquee-item tilt-up">We're getting married</span>
     <span class="marquee-heart">♥</span>
 
-    <span>We're getting married</span>
+    <span class="marquee-item tilt-down">We're getting married</span>
     <span class="marquee-heart">♥</span>
+
   </div>
 </div>
 
