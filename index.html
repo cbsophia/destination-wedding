@@ -157,7 +157,7 @@ h1 {
   overflow: hidden;
   width: 100%;
   background: #f7f1e8;
-  padding: 82px 0 92px;
+  padding: 76px 0 82px;
   margin: 0 0 28px;
 }
 
@@ -165,46 +165,42 @@ h1 {
   display: flex;
   width: max-content;
   align-items: center;
-  gap: 22px;
+  gap: 8px;
   animation: marqueeMove 34s linear infinite;
   white-space: nowrap;
 }
 
 .marquee-curve {
-  width: 340px;
-  height: 100px;
+  width: 390px;
+  height: 130px;
   overflow: visible;
   flex: 0 0 auto;
 }
 
 .marquee-curve text {
   font-family: 'Bodoni Moda', serif;
-  font-size: 29px;
+  font-size: 30px;
   font-weight: 500;
   fill: #9c5a3c;
   letter-spacing: -0.02em;
 }
 
-.marquee-heart {
-  display: inline-block;
-  font-family: 'Inter', sans-serif !important;
-  font-size: 22px !important;
-  color: #5D786E !important;
-  line-height: 1;
-  transform: translateY(-18px) rotate(-8deg);
-  flex: 0 0 auto;
+.curve-heart {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  fill: #5D786E;
 }
 
-.marquee-curve.curve-up {
-  transform: translateY(-46px) rotate(-3deg);
+.curve-high {
+  transform: translateY(-36px);
 }
 
-.marquee-curve.curve-down {
-  transform: translateY(42px) rotate(4deg);
+.curve-low {
+  transform: translateY(36px);
 }
 
-.marquee-curve.curve-soft {
-  transform: translateY(-12px) rotate(-2deg);
+.curve-mid {
+  transform: translateY(-6px);
 }
 
 @keyframes marqueeMove {
@@ -515,85 +511,71 @@ section.editorial-section .card p {
 <div class="marquee">
   <div class="marquee-track">
 
-    <svg class="marquee-curve curve-up" viewBox="0 0 340 100" aria-hidden="true">
+    <svg class="marquee-curve curve-high" viewBox="0 0 390 130" aria-hidden="true">
       <defs>
-        <path id="curve-1" d="M20 72 Q170 12 320 72"></path>
+        <path id="wave-1" d="M20 92 Q195 8 370 92"></path>
       </defs>
       <text>
-        <textPath href="#curve-1" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+        <textPath href="#wave-1" startOffset="50%" text-anchor="middle">
+          We're getting married <tspan class="curve-heart">♥</tspan>
+        </textPath>
       </text>
     </svg>
-    <span class="marquee-heart">♥</span>
 
-    <svg class="marquee-curve curve-down" viewBox="0 0 340 100" aria-hidden="true">
+    <svg class="marquee-curve curve-low" viewBox="0 0 390 130" aria-hidden="true">
       <defs>
-        <path id="curve-2" d="M20 34 Q170 86 320 34"></path>
+        <path id="wave-2" d="M20 38 Q195 118 370 38"></path>
       </defs>
       <text>
-        <textPath href="#curve-2" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+        <textPath href="#wave-2" startOffset="50%" text-anchor="middle">
+          We're getting married <tspan class="curve-heart">♥</tspan>
+        </textPath>
       </text>
     </svg>
-    <span class="marquee-heart">♥</span>
 
-    <svg class="marquee-curve curve-soft" viewBox="0 0 340 100" aria-hidden="true">
+    <svg class="marquee-curve curve-mid" viewBox="0 0 390 130" aria-hidden="true">
       <defs>
-        <path id="curve-3" d="M20 68 Q170 24 320 68"></path>
+        <path id="wave-3" d="M20 88 Q195 28 370 88"></path>
       </defs>
       <text>
-        <textPath href="#curve-3" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+        <textPath href="#wave-3" startOffset="50%" text-anchor="middle">
+          We're getting married <tspan class="curve-heart">♥</tspan>
+        </textPath>
       </text>
     </svg>
-    <span class="marquee-heart">♥</span>
 
-    <svg class="marquee-curve curve-up" viewBox="0 0 340 100" aria-hidden="true">
+    <svg class="marquee-curve curve-high" viewBox="0 0 390 130" aria-hidden="true">
       <defs>
-        <path id="curve-4" d="M20 72 Q170 12 320 72"></path>
+        <path id="wave-4" d="M20 92 Q195 8 370 92"></path>
       </defs>
       <text>
-        <textPath href="#curve-4" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+        <textPath href="#wave-4" startOffset="50%" text-anchor="middle">
+          We're getting married <tspan class="curve-heart">♥</tspan>
+        </textPath>
       </text>
     </svg>
-    <span class="marquee-heart">♥</span>
 
-    <svg class="marquee-curve curve-up" viewBox="0 0 340 100" aria-hidden="true">
+    <svg class="marquee-curve curve-low" viewBox="0 0 390 130" aria-hidden="true">
       <defs>
-        <path id="curve-5" d="M20 72 Q170 12 320 72"></path>
+        <path id="wave-5" d="M20 38 Q195 118 370 38"></path>
       </defs>
       <text>
-        <textPath href="#curve-5" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+        <textPath href="#wave-5" startOffset="50%" text-anchor="middle">
+          We're getting married <tspan class="curve-heart">♥</tspan>
+        </textPath>
       </text>
     </svg>
-    <span class="marquee-heart">♥</span>
 
-    <svg class="marquee-curve curve-down" viewBox="0 0 340 100" aria-hidden="true">
+    <svg class="marquee-curve curve-mid" viewBox="0 0 390 130" aria-hidden="true">
       <defs>
-        <path id="curve-6" d="M20 34 Q170 86 320 34"></path>
+        <path id="wave-6" d="M20 88 Q195 28 370 88"></path>
       </defs>
       <text>
-        <textPath href="#curve-6" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+        <textPath href="#wave-6" startOffset="50%" text-anchor="middle">
+          We're getting married <tspan class="curve-heart">♥</tspan>
+        </textPath>
       </text>
     </svg>
-    <span class="marquee-heart">♥</span>
-
-    <svg class="marquee-curve curve-soft" viewBox="0 0 340 100" aria-hidden="true">
-      <defs>
-        <path id="curve-7" d="M20 68 Q170 24 320 68"></path>
-      </defs>
-      <text>
-        <textPath href="#curve-7" startOffset="50%" text-anchor="middle">We're getting married</textPath>
-      </text>
-    </svg>
-    <span class="marquee-heart">♥</span>
-
-    <svg class="marquee-curve curve-up" viewBox="0 0 340 100" aria-hidden="true">
-      <defs>
-        <path id="curve-8" d="M20 72 Q170 12 320 72"></path>
-      </defs>
-      <text>
-        <textPath href="#curve-8" startOffset="50%" text-anchor="middle">We're getting married</textPath>
-      </text>
-    </svg>
-    <span class="marquee-heart">♥</span>
 
   </div>
 </div>
