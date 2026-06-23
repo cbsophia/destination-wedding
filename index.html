@@ -152,6 +152,55 @@ h1 {
   text-transform: uppercase;
   font-size: 13px;
 }
+.marquee {
+  overflow: hidden;
+  width: 100%;
+  background: #f7f1e8;
+  border-top: 1px solid #d8c4b3;
+  border-bottom: 1px solid #d8c4b3;
+  padding: 18px 0;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 28px;
+  animation: marqueeMove 26s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee span {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 28px;
+  font-style: italic;
+  color: #9c5a3c;
+}
+
+.marquee-heart {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 18px !important;
+  font-style: normal !important;
+  color: #5D786E !important;
+}
+
+.marquee-flag {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-style: normal !important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #5D786E !important;
+}
+
+@keyframes marqueeMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 
    section {
   padding: 120px 24px;
@@ -254,6 +303,55 @@ h2 {
   padding-top: 120px;
 }
 
+section.editorial-section {
+  max-width: 1200px;
+  padding: 120px 24px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.editorial-title {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(72px, 9vw, 140px);
+  font-weight: 400;
+  line-height: 0.88;
+  color: #9c5a3c;
+  margin: 0;
+}
+
+.editorial-title span {
+  display: block;
+}
+
+.editorial-content {
+  border-top: 1px solid #d8c4b3;
+}
+
+.weekend-item {
+  padding: 34px 0;
+  border-bottom: 1px solid #d8c4b3;
+}
+
+.weekend-item h3 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #9c5a3c;
+  margin: 8px 0 16px;
+}
+
+.weekend-item p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 12px 0;
+}
+
+.weekend-item .event-date {
+  margin-bottom: 8px;
+}
+
     footer {
       text-align: center;
       padding: 40px;
@@ -261,17 +359,29 @@ h2 {
       color: #fffaf2;
     }
 
-@media (max-width: 600px) {
+@@media (max-width: 800px) {
+  section.editorial-section {
+    display: block;
+    padding: 80px 24px;
+  }
 
-  .cards {
-    grid-template-columns: 1fr;
+  .editorial-title {
+    font-size: 64px;
+    margin-bottom: 44px;
+  }
+
+  .weekend-item h3 {
+    font-size: 32px;
+  }
+
+  .marquee {
+    padding: 14px 0;
+  }
+
+  .marquee span {
+    font-size: 23px;
   }
 }
-
-  h1 {
-    white-space: normal;
-  }
-
 
   </style>
 </head>
@@ -314,6 +424,34 @@ h2 {
     </div>
     
   </header>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span>We're getting married</span>
+    <span class="marquee-heart">♥</span>
+    <span class="marquee-flag">NL × PE</span>
+
+    <span>We're getting married</span>
+    <span class="marquee-heart">♥</span>
+    <span class="marquee-flag">NL × PE</span>
+
+    <span>We're getting married</span>
+    <span class="marquee-heart">♥</span>
+    <span class="marquee-flag">NL × PE</span>
+
+    <span>We're getting married</span>
+    <span class="marquee-heart">♥</span>
+    <span class="marquee-flag">NL × PE</span>
+
+    <span>We're getting married</span>
+    <span class="marquee-heart">♥</span>
+    <span class="marquee-flag">NL × PE</span>
+
+    <span>We're getting married</span>
+    <span class="marquee-heart">♥</span>
+    <span class="marquee-flag">NL × PE</span>
+  </div>
+</div>
 
   <section>
   <h2>Welcome</h2>
@@ -411,7 +549,74 @@ h2 {
   <a class="text-link" href="farewell-brunch.html">View Details →</a>
 </div>
 
+  </div><section id="wedding-weekend" class="editorial-section">
+
+  <h2 class="editorial-title">
+    <span>The</span>
+    <span>Wedding</span>
+    <span>Weekend</span>
+  </h2>
+
+  <div class="editorial-content">
+
+    <div class="weekend-item">
+      <div class="event-date">Friday, 18 June 2027</div>
+      <h3>Welcome Event</h3>
+
+      <p>
+        Join us for an unforgettable evening in the mountains as we kick off the wedding weekend together.
+      </p>
+
+      <p><strong>Dress code:</strong> Mountain Chic</p>
+
+      <p>
+        <strong>Highlights:</strong><br>
+        A surprise location · Sunset views · Drinks & Bites · Transportation provided
+      </p>
+
+      <a class="text-link" href="welcome-event.html">View Details →</a>
+    </div>
+
+    <div class="weekend-item">
+      <div class="event-date">Saturday, 19 June 2027</div>
+      <h3>Wedding Day</h3>
+
+      <p>
+        The day we've all been waiting for. Join us as we exchange vows in the Sacred Valley,
+        followed by dinner, dancing, and a night of celebration.
+      </p>
+
+      <p><strong>Dress code:</strong> To be confirmed</p>
+
+      <p>
+        <strong>Highlights:</strong><br>
+        Ceremony · Dinner & dancing · Late-night celebration
+      </p>
+
+      <a class="text-link" href="wedding-day.html">View Details →</a>
+    </div>
+
+    <div class="weekend-item">
+      <div class="event-date">Sunday, 20 June 2027</div>
+      <h3>Farewell Brunch</h3>
+
+      <p>
+        Before everyone heads off on their next adventure, we'll gather one final time
+        to share stories, laughs, and a relaxed farewell brunch together.
+      </p>
+
+      <p><strong>Dress code:</strong> Casual</p>
+
+      <p>
+        <strong>Highlights:</strong><br>
+        Relaxed brunch · Farewell drinks · Final goodbyes
+      </p>
+
+      <a class="text-link" href="farewell-brunch.html">View Details →</a>
+    </div>
+
   </div>
+
 </section>
 
   <section id="stay">
