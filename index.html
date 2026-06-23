@@ -166,7 +166,7 @@ h1 {
   width: max-content;
   align-items: center;
   gap: 18px;
-  animation: marqueeMove 34s linear infinite;
+  animation: marqueeMove 22s linear infinite;
   white-space: nowrap;
 }
 
@@ -188,25 +188,15 @@ h1 {
 .marquee-heart {
   font-family: 'Inter', sans-serif;
   font-size: 24px;
-  color: #5D786E;
+  color: #9c5a3c;
   flex: 0 0 auto;
   line-height: 1;
+  margin: 0 8px;
 }
 
-.curve-high {
-  transform: translateY(-34px);
-}
-
-.curve-low {
-  transform: translateY(34px);
-}
-
-.heart-high {
-  transform: translateY(-24px) rotate(-8deg);
-}
-
+.heart-high,
 .heart-low {
-  transform: translateY(24px) rotate(8deg);
+  transform: translateY(0) rotate(-6deg);
 }
 
 @keyframes marqueeMove {
