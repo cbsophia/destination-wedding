@@ -157,27 +157,32 @@ h1 {
   overflow: hidden;
   width: 100%;
   background: #f7f1e8;
-  padding: 82px 0 92px;
-  margin: 0;
+  padding: 48px 0 54px;
+  margin: 0 0 34px;
 }
 
 .marquee-track {
   display: flex;
   width: max-content;
   align-items: center;
-  gap: 44px;
+  gap: 22px;
   animation: marqueeMove 34s linear infinite;
   white-space: nowrap;
 }
 
-.marquee-item {
-  display: inline-block;
+.marquee-curve {
+  width: 340px;
+  height: 100px;
+  overflow: visible;
+  flex: 0 0 auto;
+}
+
+.marquee-curve text {
   font-family: 'Bodoni Moda', serif;
-  font-size: 30px;
+  font-size: 29px;
   font-weight: 500;
-  font-style: normal;
+  fill: #9c5a3c;
   letter-spacing: -0.02em;
-  color: #9c5a3c;
 }
 
 .marquee-heart {
@@ -185,19 +190,21 @@ h1 {
   font-family: 'Inter', sans-serif !important;
   font-size: 22px !important;
   color: #5D786E !important;
-  transform: rotate(-8deg) translateY(-5px);
+  line-height: 1;
+  transform: translateY(-18px) rotate(-8deg);
+  flex: 0 0 auto;
 }
 
-.tilt-up {
-  transform: rotate(-14deg) translateY(18px);
+.marquee-curve.curve-up {
+  transform: translateY(4px) rotate(-2deg);
 }
 
-.tilt-down {
-  transform: rotate(10deg) translateY(-18px);
+.marquee-curve.curve-down {
+  transform: translateY(-10px) rotate(2deg);
 }
 
-.tilt-soft {
-  transform: rotate(-6deg) translateY(8px);
+.marquee-curve.curve-soft {
+  transform: translateY(10px) rotate(-1deg);
 }
 
 @keyframes marqueeMove {
@@ -434,13 +441,23 @@ section.editorial-section .card p {
     font-size: 32px;
   }
 
-  .marquee {
-    padding: 14px 0;
-  }
+ .marquee {
+  padding: 38px 0 44px;
+}
 
-  .marquee span {
-    font-size: 23px;
-  }
+.marquee-curve {
+  width: 270px;
+  height: 82px;
+}
+
+.marquee-curve text {
+  font-size: 24px;
+}
+
+.marquee-heart {
+  font-size: 18px !important;
+  transform: translateY(-14px) rotate(-8deg);
+}
 
 .pre-story-intro {
   margin: 64px auto 30px;
@@ -498,28 +515,84 @@ section.editorial-section .card p {
 <div class="marquee">
   <div class="marquee-track">
 
-    <span class="marquee-item tilt-up">We're getting married</span>
+    <svg class="marquee-curve curve-up" viewBox="0 0 340 100" aria-hidden="true">
+      <defs>
+        <path id="curve-1" d="M20 72 Q170 12 320 72"></path>
+      </defs>
+      <text>
+        <textPath href="#curve-1" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+      </text>
+    </svg>
     <span class="marquee-heart">♥</span>
 
-    <span class="marquee-item tilt-down">We're getting married</span>
+    <svg class="marquee-curve curve-down" viewBox="0 0 340 100" aria-hidden="true">
+      <defs>
+        <path id="curve-2" d="M20 34 Q170 86 320 34"></path>
+      </defs>
+      <text>
+        <textPath href="#curve-2" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+      </text>
+    </svg>
     <span class="marquee-heart">♥</span>
 
-    <span class="marquee-item tilt-soft">We're getting married</span>
+    <svg class="marquee-curve curve-soft" viewBox="0 0 340 100" aria-hidden="true">
+      <defs>
+        <path id="curve-3" d="M20 68 Q170 24 320 68"></path>
+      </defs>
+      <text>
+        <textPath href="#curve-3" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+      </text>
+    </svg>
     <span class="marquee-heart">♥</span>
 
-    <span class="marquee-item tilt-up">We're getting married</span>
+    <svg class="marquee-curve curve-up" viewBox="0 0 340 100" aria-hidden="true">
+      <defs>
+        <path id="curve-4" d="M20 72 Q170 12 320 72"></path>
+      </defs>
+      <text>
+        <textPath href="#curve-4" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+      </text>
+    </svg>
     <span class="marquee-heart">♥</span>
 
-    <span class="marquee-item tilt-down">We're getting married</span>
+    <svg class="marquee-curve curve-up" viewBox="0 0 340 100" aria-hidden="true">
+      <defs>
+        <path id="curve-5" d="M20 72 Q170 12 320 72"></path>
+      </defs>
+      <text>
+        <textPath href="#curve-5" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+      </text>
+    </svg>
     <span class="marquee-heart">♥</span>
 
-    <span class="marquee-item tilt-soft">We're getting married</span>
+    <svg class="marquee-curve curve-down" viewBox="0 0 340 100" aria-hidden="true">
+      <defs>
+        <path id="curve-6" d="M20 34 Q170 86 320 34"></path>
+      </defs>
+      <text>
+        <textPath href="#curve-6" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+      </text>
+    </svg>
     <span class="marquee-heart">♥</span>
 
-    <span class="marquee-item tilt-up">We're getting married</span>
+    <svg class="marquee-curve curve-soft" viewBox="0 0 340 100" aria-hidden="true">
+      <defs>
+        <path id="curve-7" d="M20 68 Q170 24 320 68"></path>
+      </defs>
+      <text>
+        <textPath href="#curve-7" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+      </text>
+    </svg>
     <span class="marquee-heart">♥</span>
 
-    <span class="marquee-item tilt-down">We're getting married</span>
+    <svg class="marquee-curve curve-up" viewBox="0 0 340 100" aria-hidden="true">
+      <defs>
+        <path id="curve-8" d="M20 72 Q170 12 320 72"></path>
+      </defs>
+      <text>
+        <textPath href="#curve-8" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+      </text>
+    </svg>
     <span class="marquee-heart">♥</span>
 
   </div>
