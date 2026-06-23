@@ -186,24 +186,52 @@ h1 {
 }
 
 .marquee-heart {
-  font-family: 'Inter', sans-serif;
-  font-size: 24px;
+  font-family: 'Bodoni Moda', serif;
+  font-size: 30px;
+  font-weight: 500;
   color: #9c5a3c;
   flex: 0 0 auto;
   line-height: 1;
-}
-
-.curve-high {
-  transform: translateY(-34px);
-}
-
-.curve-low {
-  transform: translateY(34px);
+  letter-spacing: -0.02em;
 }
 
 .heart-high,
 .heart-low {
-  transform: translateY(0) rotate(-8deg);
+  animation: heartFloat 5.5s ease-in-out infinite;
+}
+.curve-high {
+  animation: curveHighFloat 5.5s ease-in-out infinite;
+}
+
+.curve-low {
+  animation: curveLowFloat 5.5s ease-in-out infinite;
+}
+
+@keyframes curveHighFloat {
+  0%, 100% {
+    transform: translateY(-34px) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-46px) rotate(1deg);
+  }
+}
+
+@keyframes curveLowFloat {
+  0%, 100% {
+    transform: translateY(34px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(46px) rotate(-1deg);
+  }
+}
+
+@keyframes heartFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-6deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(6deg);
+  }
 }
 
 @keyframes marqueeMove {
