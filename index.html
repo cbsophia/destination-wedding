@@ -159,6 +159,8 @@ h1 {
   background: #f7f1e8;
   padding: 72px 0 78px;
   margin: 0 0 28px;
+-webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .marquee-track {
@@ -193,46 +195,20 @@ h1 {
   flex: 0 0 auto;
   line-height: 1;
   letter-spacing: -0.02em;
+  margin: 0 2px;
 }
 
 .curve-high {
-  transform: translateY(-34px);
+  transform: translateY(-34px) rotate(-1deg);
 }
 
 .curve-low {
-  transform: translateY(34px);
+  transform: translateY(34px) rotate(1deg);
 }
 
 .heart-high,
 .heart-low {
   transform: translateY(0) rotate(-6deg);
-}
-
-@keyframes curveHighFloat {
-  0%, 100% {
-    transform: translateY(-34px) rotate(-1deg);
-  }
-  50% {
-    transform: translateY(-46px) rotate(1deg);
-  }
-}
-
-@keyframes curveLowFloat {
-  0%, 100% {
-    transform: translateY(34px) rotate(1deg);
-  }
-  50% {
-    transform: translateY(46px) rotate(-1deg);
-  }
-}
-
-@keyframes heartFloat {
-  0%, 100% {
-    transform: translateY(0) rotate(-6deg);
-  }
-  50% {
-    transform: translateY(-8px) rotate(6deg);
-  }
 }
 
 @keyframes marqueeMove {
