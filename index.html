@@ -191,12 +191,22 @@ h1 {
   color: #9c5a3c;
   flex: 0 0 auto;
   line-height: 1;
-  margin: 0 8px;
 }
 
-.heart-high,
+.curve-high {
+  transform: translateY(-34px);
+}
+
+.curve-low {
+  transform: translateY(34px);
+}
+
+.heart-high {
+  transform: translateY(-24px) rotate(-8deg);
+}
+
 .heart-low {
-  transform: translateY(0) rotate(-6deg);
+  transform: translateY(24px) rotate(8deg);
 }
 
 @keyframes marqueeMove {
