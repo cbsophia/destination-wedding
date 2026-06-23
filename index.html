@@ -152,45 +152,42 @@ h1 {
   text-transform: uppercase;
   font-size: 13px;
 }
+
 .marquee {
   overflow: hidden;
   width: 100%;
-  background: #f7f1e8;
+  background: #fbf8f3;
   border-top: 1px solid #d8c4b3;
   border-bottom: 1px solid #d8c4b3;
-  padding: 18px 0;
+  padding: 13px 0;
+  transform: rotate(-1deg) scale(1.03);
+  transform-origin: center;
+  margin: 8px 0 34px;
 }
 
 .marquee-track {
   display: flex;
   width: max-content;
   align-items: center;
-  gap: 28px;
-  animation: marqueeMove 26s linear infinite;
+  gap: 24px;
+  animation: marqueeMove 34s linear infinite;
   white-space: nowrap;
 }
 
 .marquee span {
-  font-family: 'Bodoni Moda', serif;
-  font-size: 28px;
-  font-style: italic;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   color: #9c5a3c;
 }
 
 .marquee-heart {
-  font-family: 'Inter', sans-serif !important;
-  font-size: 18px !important;
-  font-style: normal !important;
+  font-size: 12px !important;
   color: #5D786E !important;
-}
-
-.marquee-flag {
-  font-family: 'Inter', sans-serif !important;
-  font-size: 13px !important;
-  font-style: normal !important;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #5D786E !important;
+  letter-spacing: 0 !important;
 }
 
 @keyframes marqueeMove {
@@ -329,6 +326,43 @@ section.editorial-section {
   border-top: 1px solid #d8c4b3;
 }
 
+.editorial-copy p {
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+section.editorial-section .cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 0;
+}
+
+section.editorial-section .card {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #d8c4b3;
+  padding: 34px 0;
+}
+
+section.editorial-section .card:first-child {
+  border-top: 1px solid #d8c4b3;
+}
+
+section.editorial-section .card h3 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 34px;
+  font-weight: 400;
+  color: #9c5a3c;
+  margin: 0 0 14px;
+}
+
+section.editorial-section .card p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
 .weekend-item {
   padding: 34px 0;
   border-bottom: 1px solid #d8c4b3;
@@ -429,62 +463,69 @@ section.editorial-section {
   <div class="marquee-track">
     <span>We're getting married</span>
     <span class="marquee-heart">♥</span>
-    <span class="marquee-flag">NL × PE</span>
 
     <span>We're getting married</span>
     <span class="marquee-heart">♥</span>
-    <span class="marquee-flag">NL × PE</span>
 
     <span>We're getting married</span>
     <span class="marquee-heart">♥</span>
-    <span class="marquee-flag">NL × PE</span>
 
     <span>We're getting married</span>
     <span class="marquee-heart">♥</span>
-    <span class="marquee-flag">NL × PE</span>
 
     <span>We're getting married</span>
     <span class="marquee-heart">♥</span>
-    <span class="marquee-flag">NL × PE</span>
 
     <span>We're getting married</span>
     <span class="marquee-heart">♥</span>
-    <span class="marquee-flag">NL × PE</span>
+
+    <span>We're getting married</span>
+    <span class="marquee-heart">♥</span>
+
+    <span>We're getting married</span>
+    <span class="marquee-heart">♥</span>
   </div>
 </div>
 
-  <section>
-  <h2>Welcome</h2>
+<section id="our-story" class="editorial-section">
 
-  <p>
-    We are so happy you'll be joining us in Peru to celebrate our wedding.
-  </p>
+  <h2 class="editorial-title">
+    <span>Our</span>
+    <span>Story</span>
+  </h2>
 
-  <p>
-    If you had told Marije years ago that she would fall in love with a Peruvian,
-    get married in Peru, and convince family and friends from around the world
-    to travel to the Sacred Valley for a wedding weekend, she probably wouldn't
-    have believed you. Yet here we are.
-  </p>
+  <div class="editorial-content editorial-copy">
+    <p>
+      We are so happy you'll be joining us in Peru to celebrate our wedding.
+    </p>
 
-  <p>
-    This trip will be especially meaningful because, although Marije visited Peru
-    before we met, it will be our first time experiencing it together. We can't wait
-    to share this beautiful place — and this special moment in our lives — with all of you.
-  </p>
+    <p>
+      If you had told Marije years ago that she would fall in love with a Peruvian,
+      get married in Peru, and convince family and friends from around the world
+      to travel to the Sacred Valley for a wedding weekend, she probably wouldn't
+      have believed you. Yet here we are.
+    </p>
 
-  <p>
-    On this website you'll find everything you need to know for the wedding weekend,
-    along with travel tips, recommendations, and inspiration for exploring Peru.
-    Whether you're joining us just for a few days or turning this into a longer adventure,
-    we hope you'll discover some of the places, people, and experiences that make Peru
-    so special to us.
-  </p>
+    <p>
+      This trip will be especially meaningful because, although Marije visited Peru
+      before we met, it will be our first time experiencing it together. We can't wait
+      to share this beautiful place — and this special moment in our lives — with all of you.
+    </p>
 
-  <p>
-    With love,<br>
-    Marije & Sophia
-  </p>
+    <p>
+      On this website you'll find everything you need to know for the wedding weekend,
+      along with travel tips, recommendations, and inspiration for exploring Peru.
+      Whether you're joining us just for a few days or turning this into a longer adventure,
+      we hope you'll discover some of the places, people, and experiences that make Peru
+      so special to us.
+    </p>
+
+    <p>
+      With love,<br>
+      Marije & Sophia
+    </p>
+  </div>
+
 </section>
 
 <section id="wedding-weekend" class="editorial-section">
@@ -557,93 +598,121 @@ section.editorial-section {
 
 </section>
 
-  <section id="stay">
-  <h2>Stay With Us</h2>
-  <p>
-    Our wedding weekend will be centered around Sonesta Posadas del Inca Yucay,
-    a beautiful hotel in the heart of the Sacred Valley.
-  </p>
-  <p>
-    We encourage guests to stay here so we can enjoy the full weekend experience
-    together, from the welcome event to the farewell brunch.
-  </p>
+ <section id="stay" class="editorial-section">
 
-     <p>
-    Booking information and special rates will be shared closer to the wedding.
-  </p>
+  <h2 class="editorial-title">
+    <span>Stay</span>
+    <span>With</span>
+    <span>Us</span>
+  </h2>
+
+  <div class="editorial-content editorial-copy">
+    <p>
+      Our wedding weekend will be centered around Sonesta Posadas del Inca Yucay,
+      a beautiful hotel in the heart of the Sacred Valley.
+    </p>
+
+    <p>
+      We encourage guests to stay here so we can enjoy the full weekend experience
+      together, from the welcome event to the farewell brunch.
+    </p>
+
+    <p>
+      Booking information and special rates will be shared closer to the wedding.
+    </p>
+  </div>
+
 </section>
 
-   <section id="travel" class="section-divider">
-  <h2>Travel Information</h2>
+   <section id="travel" class="editorial-section section-divider">
 
-  <p>
-    We will be sharing practical travel information to help make your journey as smooth as possible.
-  </p>
+  <h2 class="editorial-title">
+    <span>Travel</span>
+    <span>Information</span>
+  </h2>
 
-<div class="cards">
+  <div class="editorial-content">
 
-  <div class="card">
-    <h3>Flying to Peru</h3>
     <p>
-      Most international guests will arrive in Lima, Peru's main international airport.
-      From there, a short domestic flight will bring you to Cusco, the gateway to the Sacred Valley.
+      We will be sharing practical travel information to help make your journey as smooth as possible.
     </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Flying to Peru</h3>
+        <p>
+          Most international guests will arrive in Lima, Peru's main international airport.
+          From there, a short domestic flight will bring you to Cusco, the gateway to the Sacred Valley.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Arriving in Cusco</h3>
+        <p>
+          Cusco sits at over 3,300 meters above sea level. Many travelers choose to
+          head directly to the Sacred Valley after landing, where the lower altitude makes acclimatization easier.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Altitude & Acclimatization</h3>
+        <p>
+          Drink plenty of water, take it easy on your first day, and don't be surprised if you feel a little slower than usual.
+          Most visitors adjust quickly and have no trouble enjoying their trip.
+        </p>
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="card">
-    <h3>Arriving in Cusco</h3>
-    <p>
-      Cusco sits at over 3,300 meters (11,000 feet) above sea level. Many travelers choose to
-      head directly to the Sacred Valley after landing, where the lower altitude makes acclimatization easier.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>Altitude & Acclimatization</h3>
-    <p>
-      Drink plenty of water, take it easy on your first day, and don't be surprised if you feel a little slower than usual.
-      Most visitors adjust quickly and have no trouble enjoying their trip.
-    </p>
-  </div>
-
-</div>
 </section>
     
-<section id="explore" class="section-divider">
-  <h2>Explore Peru</h2>
+<section id="explore" class="editorial-section section-divider">
 
-  <p>
-    For many of our guests, the wedding will be part of a larger adventure through Peru.
-    We've gathered a few ideas to help you decide where to spend your time before or after the wedding.
-  </p>
+  <h2 class="editorial-title">
+    <span>Explore</span>
+    <span>Peru</span>
+  </h2>
 
-  <div class="cards">
+  <div class="editorial-content">
 
-    <div class="card">
-      <h3>Lima</h3>
-      <p>
-        Peru's capital is known for its incredible food scene, coastal views,
-        museums, and lively neighborhoods.
-      </p>
-    </div>
+    <p>
+      For many of our guests, the wedding will be part of a larger adventure through Peru.
+      We've gathered a few ideas to help you decide where to spend your time before or after the wedding.
+    </p>
 
-    <div class="card">
-      <h3>Cusco</h3>
-      <p>
-        Explore Cusco City, the Sacred Valley, and Machu Picchu — the heart of
-        Peru's Andean region and the setting for our wedding weekend.
-      </p>
-    </div>
+    <div class="cards">
 
-    <div class="card">
-      <h3>Other Destinations</h3>
-      <p>
-        Arequipa, Huaraz, Ica, Puerto Maldonado, Piura, and Puno are all wonderful
-        options if you want to discover more of Peru.
-      </p>
+      <div class="card">
+        <h3>Lima</h3>
+        <p>
+          Peru's capital is known for its incredible food scene, coastal views,
+          museums, and lively neighborhoods.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Cusco</h3>
+        <p>
+          Explore Cusco City, the Sacred Valley, and Machu Picchu — the heart of
+          Peru's Andean region and the setting for our wedding weekend.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Other Destinations</h3>
+        <p>
+          Arequipa, Huaraz, Ica, Puerto Maldonado, Piura, and Puno are all wonderful
+          options if you want to discover more of Peru.
+        </p>
+      </div>
+
     </div>
 
   </div>
+
 </section>
 
   <section id="rsvp">
