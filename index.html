@@ -514,70 +514,77 @@ section.editorial-section .card p {
     
   </header>
 
-.marquee {
-  overflow: hidden;
-  width: 100%;
-  background: #f7f1e8;
-  padding: 72px 0 78px;
-  margin: 0 0 28px;
-}
+<div class="marquee">
+  <div class="marquee-track">
 
-.marquee-track {
-  display: flex;
-  width: max-content;
-  align-items: center;
-  gap: 18px;
-  animation: marqueeMove 34s linear infinite;
-  white-space: nowrap;
-}
+    <svg class="marquee-curve curve-high" viewBox="0 0 300 105" aria-hidden="true">
+      <defs>
+        <path id="wave-a1" d="M15 76 Q150 18 285 76"></path>
+      </defs>
+      <text>
+        <textPath href="#wave-a1" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+      </text>
+    </svg>
 
-.marquee-curve {
-  width: 300px;
-  height: 105px;
-  overflow: visible;
-  flex: 0 0 auto;
-}
+    <span class="marquee-heart heart-high">♥</span>
 
-.marquee-curve text {
-  font-family: 'Bodoni Moda', serif;
-  font-size: 28px;
-  font-weight: 500;
-  fill: #9c5a3c;
-  letter-spacing: -0.02em;
-}
+    <svg class="marquee-curve curve-low" viewBox="0 0 300 105" aria-hidden="true">
+      <defs>
+        <path id="wave-a2" d="M15 28 Q150 88 285 28"></path>
+      </defs>
+      <text>
+        <textPath href="#wave-a2" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+      </text>
+    </svg>
 
-.marquee-heart {
-  font-family: 'Inter', sans-serif;
-  font-size: 24px;
-  color: #5D786E;
-  flex: 0 0 auto;
-  line-height: 1;
-}
+    <span class="marquee-heart heart-low">♥</span>
 
-.curve-high {
-  transform: translateY(-34px);
-}
+    <svg class="marquee-curve curve-high" viewBox="0 0 300 105" aria-hidden="true">
+      <defs>
+        <path id="wave-a3" d="M15 76 Q150 18 285 76"></path>
+      </defs>
+      <text>
+        <textPath href="#wave-a3" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+      </text>
+    </svg>
 
-.curve-low {
-  transform: translateY(34px);
-}
+    <span class="marquee-heart heart-high">♥</span>
 
-.heart-high {
-  transform: translateY(-24px) rotate(-8deg);
-}
+    <svg class="marquee-curve curve-low" viewBox="0 0 300 105" aria-hidden="true">
+      <defs>
+        <path id="wave-a4" d="M15 28 Q150 88 285 28"></path>
+      </defs>
+      <text>
+        <textPath href="#wave-a4" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+      </text>
+    </svg>
 
-.heart-low {
-  transform: translateY(24px) rotate(8deg);
-}
+    <span class="marquee-heart heart-low">♥</span>
 
-@keyframes marqueeMove {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
+    <svg class="marquee-curve curve-high" viewBox="0 0 300 105" aria-hidden="true">
+      <defs>
+        <path id="wave-a5" d="M15 76 Q150 18 285 76"></path>
+      </defs>
+      <text>
+        <textPath href="#wave-a5" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+      </text>
+    </svg>
+
+    <span class="marquee-heart heart-high">♥</span>
+
+    <svg class="marquee-curve curve-low" viewBox="0 0 300 105" aria-hidden="true">
+      <defs>
+        <path id="wave-a6" d="M15 28 Q150 88 285 28"></path>
+      </defs>
+      <text>
+        <textPath href="#wave-a6" startOffset="50%" text-anchor="middle">We're getting married</textPath>
+      </text>
+    </svg>
+
+    <span class="marquee-heart heart-low">♥</span>
+
+  </div>
+</div>
 
 <section class="pre-story-intro">
   <p>
