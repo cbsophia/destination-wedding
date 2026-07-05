@@ -140,29 +140,18 @@ header::before {
 }
 
 .hero-side.left {
-  left: 80px;
-  text-align: left;
+  left: 70px;
+  text-align: center;
 }
 
 .hero-side.right {
-  right: 80px;
-  text-align: right;
-}
-
-.eyebrow {
-  font-family: 'Bodoni Moda', serif;
-  font-size: 32px;
-  font-weight: 400;
-  letter-spacing: 0;
-  text-transform: none;
-  margin-bottom: 12px;
-  color: #f3d6c1;
-  font-style: italic;
+  right: 70px;
+  text-align: center;
 }
     
 h1 {
   font-family: 'Bodoni Moda', serif;
-  font-size: clamp(82px, 11vw, 168px);
+  font-size: clamp(68px, 9vw, 132px);
   font-weight: 500;
   line-height: 0.88;
   letter-spacing: -0.04em;
@@ -182,24 +171,6 @@ h1 {
   font-size: clamp(72px, 8vw, 130px);
   line-height: 0.8;
   color: #9c5a3c;
-}
-
-  .subtitle {
-  font-family: 'Bodoni Moda', serif;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 1.25;
-  letter-spacing: 1px;
-  margin-top: 32px;
-}
-
-.date {
-  font-family: Avenir, sans-serif;
-  font-size: 15px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-top: 22px;
-  color: #f3d6c1;
 }
 
 .hero-rsvp {
@@ -452,50 +423,47 @@ section.editorial-section .card p {
 }
 
 @media (max-width: 800px) {
-  section.editorial-section {
-    display: block;
-    padding: 80px 24px;
+  header {
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px 95px;
   }
 
-header {
-  min-height: 78vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 24px 90px;
-}
+  h1 {
+    font-size: clamp(58px, 16vw, 86px);
+    line-height: 0.92;
+  }
 
-h1 {
-  font-size: clamp(62px, 18vw, 92px);
-  line-height: 0.92;
-}
+  .hero-ampersand {
+    font-size: clamp(48px, 13vw, 72px);
+  }
 
-.hero-ampersand {
-  font-size: clamp(58px, 15vw, 80px);
-}
+  .hero-side {
+    width: 140px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    line-height: 1.45;
+    top: auto;
+    transform: none;
+    bottom: 30px;
+    text-align: center;
+  }
 
-.hero-side {
-  font-size: 12px;
-  letter-spacing: 2.5px;
-  top: auto;
-  transform: none;
-  bottom: 34px;
-}
+  .hero-side.left {
+    left: 16px;
+  }
 
-.hero-side.left {
-  left: 24px;
-  text-align: left;
-}
+  .hero-side.right {
+    right: 16px;
+  }
 
-.hero-side.right {
-  right: 24px;
-  text-align: right;
-}
-
-.hero-rsvp {
-  margin-top: 26px;
-  font-size: 12px;
-  padding: 9px 18px;
+  .hero-rsvp {
+    margin-top: 28px;
+    font-size: 12px;
+    padding: 9px 18px;
+  }
 }
 
   .editorial-title {
@@ -528,9 +496,7 @@ h1 {
   font-size: 24px;
   line-height: 1.38;
 }
-}
 
-  </style>
 </head>
 
 <body>
@@ -565,17 +531,18 @@ h1 {
 
   <div class="hero-content">
     <h1>
-      <span class="hero-name">MARIJE</span>
+      <span class="hero-name">Marije</span>
       <span class="hero-ampersand">&</span>
-      <span class="hero-name">SOPHIA</span>
+      <span class="hero-name">Sophia</span>
     </h1>
 
     <a class="hero-rsvp" href="#rsvp">RSVP</a>
   </div>
 
   <div class="hero-side right">
-    <span>18.06.27</span>
-    <span>SACRED VALLEY, PERU</span>
+    <span>18-20 June 2027</span>
+    <span>Sacred Valley</span>
+    <span>Peru</span>
   </div>
 </header>
 
