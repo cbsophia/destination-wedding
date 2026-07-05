@@ -1247,6 +1247,63 @@ header {
   }
 }
 
+/* RSVP WAVE BANNER */
+
+.rsvp-marquee {
+  overflow: hidden;
+  background: #ead1c8;
+  border-top: 1px solid rgba(156, 90, 60, 0.18);
+  border-bottom: 1px solid rgba(156, 90, 60, 0.18);
+  padding: 18px 0 14px;
+  margin: 0;
+}
+
+.rsvp-wave-banner {
+  display: block;
+  width: 100%;
+  height: 150px;
+}
+
+.rsvp-wave-banner text {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  font-weight: 600;
+  fill: #9c5a3c;
+  letter-spacing: 0.02em;
+}
+
+/* SPACING AROUND FAQ, RSVP BANNER AND RSVP */
+
+#faq {
+  padding-bottom: 90px !important;
+}
+
+.rsvp-marquee + #rsvp {
+  padding-top: 90px !important;
+}
+
+@media (max-width: 800px) {
+  .rsvp-marquee {
+    padding: 14px 0 10px;
+  }
+
+  .rsvp-wave-banner {
+    height: 120px;
+  }
+
+  .rsvp-wave-banner text {
+    font-size: 30px;
+  }
+
+  #faq {
+    padding-bottom: 70px !important;
+  }
+
+  .rsvp-marquee + #rsvp {
+    padding-top: 70px !important;
+  }
+}
+
 </style>
 </head>
 
@@ -1261,8 +1318,8 @@ header {
      <a href="#wedding-weekend">Wedding Weekend</a>
 <a href="#travel">Travel</a>
 <a href="#explore">Explore Peru</a>
-<a href="#rsvp">RSVP</a>
 <a href="#faq">FAQ</a>
+<a href="#rsvp">RSVP</a>
 </div>
 
    <div class="language-switch">
@@ -1569,6 +1626,45 @@ header {
 
 </section>
 
+<section id="faq">
+  <h2 class="editorial-title small-editorial-title">
+  <span>FAQ</span>
+</h2>
+  <p>
+    Frequently asked questions will be added here soon.
+  </p>
+</section>
+
+<div class="rsvp-marquee">
+  <svg class="rsvp-wave-banner" viewBox="0 0 1400 150" aria-hidden="true">
+    <defs>
+      <path id="rsvp-wave"
+        d="M -900 82
+           C -720 12, -540 152, -360 82
+           S 0 12, 180 82
+           S 540 152, 720 82
+           S 1080 12, 1260 82
+           S 1620 152, 1800 82
+           S 2160 12, 2340 82
+           S 2700 152, 2880 82
+           S 3240 12, 3420 82" />
+    </defs>
+
+    <text xml:space="preserve">
+      <textPath href="#rsvp-wave" startOffset="0">
+        <animate
+          attributeName="startOffset"
+          from="0"
+          to="-360"
+          dur="5s"
+          repeatCount="indefinite"
+          calcMode="linear" />
+        RSVP     ☟     RSVP     ☟     RSVP     ☟     RSVP     ☟     RSVP     ☟     RSVP     ☟     RSVP     ☟     RSVP     ☟     RSVP     ☟     RSVP     ☟     RSVP     ☟     RSVP     ☟
+      </textPath>
+    </text>
+  </svg>
+</div>
+
   <section id="rsvp">
     <h2 class="editorial-title small-editorial-title">
   <span>RSVP</span>
@@ -1577,15 +1673,6 @@ header {
       RSVP details will be added here soon.
     </p>
   </section>
-
-  <section id="faq">
-  <h2 class="editorial-title small-editorial-title">
-  <span>FAQ</span>
-</h2>
-  <p>
-    Frequently asked questions will be added here soon.
-  </p>
-</section>
   
   <footer>
     Marije & Sophia · Sacred Valley, Peru · 18–20 June 2027
