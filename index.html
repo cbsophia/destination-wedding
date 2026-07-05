@@ -1604,6 +1604,74 @@ header {
     font-size: 17px;
   }
 }
+/* OUR STORY - TITLE ABOVE, TEXT + PHOTO SIDE BY SIDE */
+
+#our-story.our-story-editorial {
+  display: block;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+#our-story.our-story-editorial .editorial-title {
+  max-width: 760px;
+  margin-bottom: 70px;
+  padding-left: 0;
+}
+
+.our-story-main {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.our-story-copy {
+  max-width: 620px;
+}
+
+.our-story-copy p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+  font-weight: 300;
+  color: #9c5a3c;
+  margin: 0 0 26px;
+}
+
+.our-story-photo {
+  width: 100%;
+  max-width: 520px;
+  justify-self: end;
+}
+
+.our-story-photo img {
+  width: 100%;
+  display: block;
+  filter: grayscale(100%) contrast(0.96) brightness(1.04);
+}
+
+.story-photo-caption {
+  display: none !important;
+}
+@media (max-width: 800px) {
+  #our-story.our-story-editorial .editorial-title {
+    margin-bottom: 44px;
+  }
+
+  .our-story-main {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .our-story-photo {
+    max-width: 100%;
+    justify-self: start;
+  }
+
+  .our-story-copy p {
+    font-size: 17px;
+  }
+}
 
 </style>
 </head>
@@ -1697,11 +1765,12 @@ header {
 
 <section id="our-story" class="editorial-section our-story-editorial">
 
-  <div class="our-story-text">
-    <h2 class="editorial-title">
-      <span>Our</span>
-      <span>Story</span>
-    </h2>
+  <h2 class="editorial-title">
+    <span>Our</span>
+    <span>Story</span>
+  </h2>
+
+  <div class="our-story-main">
 
     <div class="our-story-copy">
       <p>
@@ -1726,11 +1795,11 @@ header {
         Marije & Sophia
       </p>
     </div>
-  </div>
 
-  <div class="our-story-photo">
-    <img src="images/our-story-photo.jpg.jpeg" alt="Marije and Sophia">
-    <p class="story-photo-caption">Marije & Sophia</p>
+    <div class="our-story-photo">
+      <img src="images/our-story-photo.jpg.jpeg" alt="Marije and Sophia">
+    </div>
+
   </div>
 
 </section>
