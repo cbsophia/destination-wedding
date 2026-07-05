@@ -140,18 +140,26 @@ h1 {
   color: #f3d6c1;
 }
 
-.button {
+.hero-rsvp {
   display: inline-block;
-  margin-top: 36px;
-  padding: 16px 34px;
-  border: 1px solid #fffaf2;
-  border-radius: 30px;
-  color: #fffaf2;
+  margin-top: 34px;
+  padding: 11px 24px;
+  border: 1px solid #9c5a3c;
+  color: #9c5a3c;
   text-decoration: none;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 13px;
+  font-family: 'Inter', sans-serif;
+  background: rgba(255, 250, 242, 0.65);
+  transition: all 0.25s ease;
 }
+
+.hero-rsvp:hover {
+  background: #9c5a3c;
+  color: #fffaf2;
+}
+
 .marquee {
   overflow: hidden;
   width: 100%;
@@ -386,6 +394,12 @@ section.editorial-section .card p {
     padding: 80px 24px;
   }
 
+.hero-rsvp {
+  margin-top: 26px;
+  font-size: 12px;
+  padding: 9px 18px;
+}
+
   .editorial-title {
     font-size: 64px;
     margin-bottom: 44px;
@@ -451,20 +465,29 @@ section.editorial-section .card p {
   </div>
 </nav>
   
-  <header>
-    <div class="hero-content">
-      <div class="eyebrow">Love, Mountains & Pisco Sours</div>
-      <h1>Marije & Sophia</h1>
-      <div class="subtitle">
-        Sacred Valley in Cusco, Peru
-      </div>
-      
-      <div class="date">18–20 June 2027</div>
-      
-      <a class="button" href="#rsvp">RSVP</a>
-    </div>
-    
-  </header>
+<header>
+  <div class="hero-side left">
+    <span>We’re getting</span>
+    <span>married</span>
+  </div>
+
+  <a class="button" href="#rsvp">RSVP</a>
+
+  <div class="hero-content">
+    <h1>
+      <span>Marije</span>
+      <span class="hero-ampersand">&</span>
+      <span>Sophia</span>
+    </h1>
+
+<a class="hero-rsvp" href="#rsvp">RSVP</a>
+  </div>
+
+  <div class="hero-side right">
+    <span>18-20 June 2027</span>
+    <span>Sacred Valley, Peru</span>
+  </div>
+</header>
 
 <div class="marquee">
   <svg class="wave-banner" viewBox="0 0 1400 150" aria-hidden="true">
