@@ -466,6 +466,14 @@ section.editorial-section .card p {
     font-size: 12px;
     padding: 9px 18px;
   }
+section.editorial-section {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.editorial-title {
+  padding-left: 0;
+}
 }
 
   .editorial-title {
@@ -542,10 +550,16 @@ section.editorial-section {
   padding-top: 170px;
 }
 
+section.editorial-section {
+  padding-left: clamp(72px, 8vw, 130px);
+  padding-right: clamp(48px, 7vw, 110px);
+}
+
 .editorial-title {
   text-align: left;
   justify-self: stretch;
   width: 100%;
+  padding-left: clamp(10px, 2vw, 34px);
 }
 
 </style>
