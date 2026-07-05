@@ -820,6 +820,100 @@ header {
   padding-top: 10px !important;
 }
 
+/* WEDDING WEEKEND OPTION 2 - TITLE ABOVE 3 COLUMNS */
+
+#wedding-weekend.weekend-option-two {
+  display: block;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+#wedding-weekend.weekend-option-two .editorial-title {
+  max-width: 760px;
+  margin-bottom: 70px;
+  padding-left: 0;
+}
+
+#wedding-weekend .weekend-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  border-top: none;
+}
+
+#wedding-weekend .weekend-item {
+  border-top: 1px solid rgba(156, 90, 60, 0.38);
+  border-bottom: none;
+  padding: 24px 0 0;
+}
+
+.weekend-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #9c5a3c;
+  margin-bottom: 28px;
+}
+
+#wedding-weekend .event-date {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #9c5a3c;
+  margin-bottom: 14px;
+}
+
+#wedding-weekend .weekend-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 3vw, 46px);
+  font-weight: 500;
+  line-height: 1;
+  color: #9c5a3c;
+  margin: 0 0 24px;
+}
+
+#wedding-weekend .weekend-item p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  font-weight: 300;
+  color: #9c5a3c;
+  margin: 0 0 20px;
+}
+
+#wedding-weekend .text-link {
+  margin-top: 8px;
+}
+
+@media (max-width: 800px) {
+  #wedding-weekend.weekend-option-two .editorial-title {
+    margin-bottom: 48px;
+  }
+
+  #wedding-weekend .weekend-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  #wedding-weekend .weekend-item {
+    padding: 30px 0 34px;
+    border-top: 1px solid rgba(156, 90, 60, 0.38);
+  }
+
+  #wedding-weekend .weekend-item:last-child {
+    border-bottom: 1px solid rgba(156, 90, 60, 0.38);
+  }
+
+  .weekend-number {
+    margin-bottom: 18px;
+  }
+
+  #wedding-weekend .weekend-item h3 {
+    font-size: 36px;
+  }
+}
+
 </style>
 </head>
 
@@ -943,7 +1037,7 @@ header {
 
 </section>
 
-<section id="wedding-weekend" class="editorial-section">
+<section id="wedding-weekend" class="editorial-section weekend-option-two">
 
   <h2 class="editorial-title">
     <span>The</span>
@@ -951,17 +1045,16 @@ header {
     <span>Weekend</span>
   </h2>
 
-  <div class="editorial-content">
+  <div class="editorial-content weekend-grid">
 
     <div class="weekend-item">
+      <div class="weekend-number">01</div>
       <div class="event-date">Friday, 18 June 2027</div>
       <h3>Welcome Event</h3>
 
       <p>
         Join us for an unforgettable evening in the mountains as we kick off the wedding weekend together.
       </p>
-
-      <p><strong>Dress code:</strong> Mountain Chic</p>
 
       <p>
         <strong>Highlights:</strong><br>
@@ -972,6 +1065,7 @@ header {
     </div>
 
     <div class="weekend-item">
+      <div class="weekend-number">02</div>
       <div class="event-date">Saturday, 19 June 2027</div>
       <h3>Wedding Day</h3>
 
@@ -979,8 +1073,6 @@ header {
         The day we've all been waiting for. Join us as we exchange vows in the Sacred Valley,
         followed by dinner, dancing, and a night of celebration.
       </p>
-
-      <p><strong>Dress code:</strong> To be confirmed</p>
 
       <p>
         <strong>Highlights:</strong><br>
@@ -991,6 +1083,7 @@ header {
     </div>
 
     <div class="weekend-item">
+      <div class="weekend-number">03</div>
       <div class="event-date">Sunday, 20 June 2027</div>
       <h3>Farewell Brunch</h3>
 
@@ -998,8 +1091,6 @@ header {
         Before everyone heads off on their next adventure, we'll gather one final time
         to share stories, laughs, and a relaxed farewell brunch together.
       </p>
-
-      <p><strong>Dress code:</strong> Casual</p>
 
       <p>
         <strong>Highlights:</strong><br>
