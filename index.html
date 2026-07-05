@@ -1182,6 +1182,48 @@ header {
   display: none !important;
 }
 
+/* RSVP + FAQ EDITORIAL TITLES */
+
+#rsvp,
+#faq {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: clamp(72px, 8vw, 130px);
+  padding-right: clamp(48px, 7vw, 110px);
+}
+
+#rsvp .editorial-title,
+#faq .editorial-title {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(82px, 9.5vw, 155px);
+  font-weight: 500;
+  line-height: 0.84;
+  letter-spacing: -0.04em;
+  color: #9c5a3c;
+  text-align: left;
+  padding-left: 0;
+  margin-bottom: 54px;
+}
+
+#rsvp .editorial-title span,
+#faq .editorial-title span {
+  display: block;
+}
+
+@media (max-width: 800px) {
+  #rsvp,
+  #faq {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+
+  #rsvp .editorial-title,
+  #faq .editorial-title {
+    font-size: clamp(58px, 18vw, 86px);
+    margin-bottom: 36px;
+  }
+}
+
 </style>
 </head>
 
@@ -1505,14 +1547,18 @@ header {
 </section>
 
   <section id="rsvp">
-    <h2>RSVP</h2>
+    <h2 class="editorial-title small-editorial-title">
+  <span>RSVP</span>
+</h2>
     <p>
       RSVP details will be added here soon.
     </p>
   </section>
 
   <section id="faq">
-  <h2>FAQ</h2>
+  <h2 class="editorial-title small-editorial-title">
+  <span>FAQ</span>
+</h2>
   <p>
     Frequently asked questions will be added here soon.
   </p>
