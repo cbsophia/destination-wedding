@@ -499,6 +499,48 @@ section.editorial-section .card p {
   font-size: 24px;
   line-height: 1.38;
 }
+/* SOFTER SECTION SPACING + REMOVE DIVIDER LINES */
+
+header {
+  border-bottom: none;
+}
+
+.pre-story-intro {
+  border-top: none;
+  border-bottom: none;
+  margin: 0;
+  padding: 96px 24px 120px;
+}
+
+.pre-story-intro p {
+  max-width: 860px;
+  margin: 0 0 0 clamp(48px, 8vw, 110px);
+}
+
+section.editorial-section {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 170px 56px;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 120px;
+  align-items: center;
+}
+
+.editorial-title {
+  font-size: clamp(96px, 11vw, 190px);
+  line-height: 0.8;
+  text-align: center;
+  letter-spacing: -0.045em;
+}
+
+.editorial-content {
+  border-top: none;
+}
+
+.section-divider {
+  border-top: none;
+  padding-top: 170px;
+}
 
 </style>
 </head>
