@@ -1063,6 +1063,109 @@ header {
   }
 }
 
+/* TRAVEL INFORMATION - SAME STRUCTURE AS EXPLORE PERU */
+
+#travel.travel-option-two {
+  display: block;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.travel-header {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 90px;
+  align-items: end;
+  margin-bottom: 72px;
+}
+
+#travel.travel-option-two .editorial-title {
+  max-width: 520px;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.travel-intro {
+  max-width: 620px;
+  margin: 0 !important;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+  font-weight: 300;
+  color: #9c5a3c;
+}
+
+.travel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.travel-item {
+  padding: 0;
+}
+
+.travel-number {
+  display: block;
+  padding-bottom: 20px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid rgba(156, 90, 60, 0.38);
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #9c5a3c;
+}
+
+.travel-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 3vw, 46px);
+  font-weight: 500;
+  line-height: 1;
+  color: #9c5a3c;
+  margin: 0 0 24px;
+}
+
+.travel-item p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  font-weight: 300;
+  color: #9c5a3c;
+  margin: 0;
+}
+@media (max-width: 800px) {
+  .travel-header {
+    display: block;
+    margin-bottom: 48px;
+  }
+
+  #travel.travel-option-two .editorial-title {
+    margin-bottom: 30px;
+  }
+
+  .travel-intro {
+    font-size: 17px;
+  }
+
+  .travel-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .travel-item {
+    padding: 30px 0 34px;
+  }
+
+  .travel-number {
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+  }
+
+  .travel-item h3 {
+    font-size: 36px;
+  }
+}
+
 </style>
 </head>
 
@@ -1279,45 +1382,52 @@ header {
 
 </section>
 
-   <section id="travel" class="editorial-section section-divider">
+  <section id="travel" class="editorial-section section-divider travel-option-two">
 
-  <h2 class="editorial-title">
-    <span>Travel</span>
-    <span>Information</span>
-  </h2>
+  <div class="travel-header">
+    <h2 class="editorial-title">
+      <span>Travel</span>
+      <span>Information</span>
+    </h2>
 
-  <div class="editorial-content">
-
-    <p>
+    <p class="travel-intro">
       We will be sharing practical travel information to help make your journey as smooth as possible.
     </p>
+  </div>
 
-    <div class="cards">
+  <div class="travel-grid">
 
-      <div class="card">
-        <h3>Flying to Peru</h3>
-        <p>
-          Most international guests will arrive in Lima, Peru's main international airport.
-          From there, a short domestic flight will bring you to Cusco, the gateway to the Sacred Valley.
-        </p>
-      </div>
+    <div class="travel-item">
+      <div class="travel-number">01</div>
 
-      <div class="card">
-        <h3>Arriving in Cusco</h3>
-        <p>
-          Cusco sits at over 3,300 meters above sea level. Many travelers choose to
-          head directly to the Sacred Valley after landing, where the lower altitude makes acclimatization easier.
-        </p>
-      </div>
+      <h3>Flying to Peru</h3>
 
-      <div class="card">
-        <h3>Altitude & Acclimatization</h3>
-        <p>
-          Drink plenty of water, take it easy on your first day, and don't be surprised if you feel a little slower than usual.
-          Most visitors adjust quickly and have no trouble enjoying their trip.
-        </p>
-      </div>
+      <p>
+        Most international guests will arrive in Lima, Peru's main international airport.
+        From there, a short domestic flight will bring you to Cusco, the gateway to the Sacred Valley.
+      </p>
+    </div>
 
+    <div class="travel-item">
+      <div class="travel-number">02</div>
+
+      <h3>Arriving in Cusco</h3>
+
+      <p>
+        Cusco sits at over 3,300 meters above sea level. Many travelers choose to
+        head directly to the Sacred Valley after landing, where the lower altitude makes acclimatization easier.
+      </p>
+    </div>
+
+    <div class="travel-item">
+      <div class="travel-number">03</div>
+
+      <h3>Altitude & Acclimatization</h3>
+
+      <p>
+        Drink plenty of water, take it easy on your first day, and don't be surprised if you feel a little slower than usual.
+        Most visitors adjust quickly and have no trouble enjoying their trip.
+      </p>
     </div>
 
   </div>
