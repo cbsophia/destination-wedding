@@ -730,11 +730,49 @@ header h1 {
 
 .pre-story-intro p {
   font-family: 'DM Sans', sans-serif;
-  font-size: clamp(22px, 2.5vw, 34px);
+  font-size: clamp(20px, 2.5vw, 34px);
   line-height: 1.38;
   font-weight: 300;
   color: #9c5a3c;
   letter-spacing: -0.01em;
+}
+/* REMOVE HERO PHOTO + TERRACOTTA NAV */
+
+header::before {
+  display: none;
+}
+
+nav {
+  background: #9c5a3c;
+  border-bottom: none;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 26px;
+  font-weight: 500;
+  color: #fffaf2;
+  letter-spacing: 0.02em;
+}
+
+.nav-links a {
+  color: #fffaf2;
+}
+
+.nav-links a:hover {
+  color: #f7f1e8;
+}
+
+.language-switch {
+  color: #fffaf2;
+}
+
+.language-switch a {
+  color: #fffaf2;
+}
+
+.language-switch a:hover {
+  color: #f7f1e8;
 }
 
 </style>
