@@ -955,6 +955,113 @@ header {
 #wedding-weekend .text-link {
   font-weight: 700 !important;
 }
+/* EXPLORE PERU OPTION 2 - TITLE + INTRO SIDE BY SIDE */
+
+#explore.explore-option-two {
+  display: block;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.explore-header {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 90px;
+  align-items: end;
+  margin-bottom: 72px;
+}
+
+#explore.explore-option-two .editorial-title {
+  max-width: 520px;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.explore-intro {
+  max-width: 620px;
+  margin: 0 !important;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+  font-weight: 300;
+  color: #9c5a3c;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.explore-item {
+  padding: 0;
+}
+
+.explore-number {
+  display: block;
+  padding-bottom: 20px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid rgba(156, 90, 60, 0.38);
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #9c5a3c;
+}
+
+.explore-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 3vw, 46px);
+  font-weight: 500;
+  line-height: 1;
+  color: #9c5a3c;
+  margin: 0 0 24px;
+}
+
+.explore-item p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  font-weight: 300;
+  color: #9c5a3c;
+  margin: 0 0 22px;
+}
+
+#explore .text-link {
+  font-weight: 700 !important;
+}
+
+@media (max-width: 800px) {
+  .explore-header {
+    display: block;
+    margin-bottom: 48px;
+  }
+
+  #explore.explore-option-two .editorial-title {
+    margin-bottom: 30px;
+  }
+
+  .explore-intro {
+    font-size: 17px;
+  }
+
+  .explore-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .explore-item {
+    padding: 30px 0 34px;
+  }
+
+  .explore-number {
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+  }
+
+  .explore-item h3 {
+    font-size: 36px;
+  }
+}
 
 </style>
 </head>
@@ -1272,7 +1379,6 @@ header {
 
   </div>
 
-</section>
 </section>
 
   <section id="rsvp">
