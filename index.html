@@ -1303,6 +1303,134 @@ header {
     padding-top: 70px !important;
   }
 }
+/* RSVP BANNER - TRANSPARENT + INFINITE */
+
+.rsvp-marquee {
+  overflow: hidden;
+  background: transparent !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  padding: 10px 0 6px !important;
+  margin: 0 !important;
+}
+
+.rsvp-wave-banner {
+  display: block;
+  width: 100%;
+  height: 145px;
+}
+
+.rsvp-wave-banner text {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  font-weight: 600;
+  fill: #9c5a3c;
+  letter-spacing: 0.02em;
+}
+
+/* RSVP EDITORIAL SECTION */
+
+#rsvp.rsvp-editorial {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 90px;
+  align-items: start;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-top: 95px !important;
+  padding-bottom: 130px !important;
+}
+
+#rsvp.rsvp-editorial .editorial-title {
+  max-width: 520px;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.rsvp-content {
+  max-width: 620px;
+  padding-top: 18px;
+}
+
+.rsvp-kicker {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(30px, 3vw, 46px) !important;
+  line-height: 1.05 !important;
+  font-weight: 500 !important;
+  color: #9c5a3c;
+  margin: 0 0 24px !important;
+}
+
+.rsvp-content p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+  font-weight: 300;
+  color: #9c5a3c;
+  margin: 0 0 30px;
+}
+
+.rsvp-button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 15px 34px;
+  border: 1px solid #9c5a3c;
+  border-radius: 999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #9c5a3c;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.rsvp-button:hover {
+  background: #9c5a3c;
+  color: #fffaf2;
+}
+
+.rsvp-note {
+  margin-top: 18px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 11px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(156, 90, 60, 0.75);
+}
+@media (max-width: 800px) {
+  .rsvp-wave-banner {
+    height: 120px;
+  }
+
+  .rsvp-wave-banner text {
+    font-size: 30px;
+  }
+
+  #rsvp.rsvp-editorial {
+    display: block;
+    padding-top: 70px !important;
+    padding-bottom: 90px !important;
+  }
+
+  #rsvp.rsvp-editorial .editorial-title {
+    margin-bottom: 36px;
+  }
+
+  .rsvp-content {
+    padding-top: 0;
+  }
+
+  .rsvp-kicker {
+    font-size: 34px !important;
+  }
+
+  .rsvp-content p {
+    font-size: 17px;
+  }
+}
 
 </style>
 </head>
@@ -1665,14 +1793,31 @@ header {
   </svg>
 </div>
 
-  <section id="rsvp">
-    <h2 class="editorial-title small-editorial-title">
-  <span>RSVP</span>
-</h2>
+  <section id="rsvp" class="editorial-section rsvp-editorial">
+
+  <h2 class="editorial-title">
+    <span>RSVP</span>
+  </h2>
+
+  <div class="rsvp-content">
+    <p class="rsvp-kicker">We can’t wait to celebrate with you.</p>
+
     <p>
-      RSVP details will be added here soon.
+      Please let us know whether you’ll be joining us in Peru by filling in the RSVP form.
+      This will help us collect your details, dietary requirements, attendance for each event,
+      and any travel information we may need.
     </p>
-  </section>
+
+    <a class="rsvp-button" href="#" target="_blank" rel="noopener">
+      RSVP
+    </a>
+
+    <p class="rsvp-note">
+      The RSVP form will open in a new page.
+    </p>
+  </div>
+
+</section>
   
   <footer>
     Marije & Sophia · Sacred Valley, Peru · 18–20 June 2027
