@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Welcome Event | Marije & Sophia</title>
+  <title>Welcome Event | Marije & Sophia</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<style>
+  <style>
+/* ================================
+   BASE
+================================ */
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -23,171 +30,397 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  background: #f7f1e8;
+  color: #9c5a3c;
+}
+
 img {
   max-width: 100%;
 }
 
-body {
-  margin: 0;
-  font-family: 'Cormorant Garamond', serif;
-  background: #f7f1e8;
-  color: #4d4d4d;
-}
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 90px 40px 20px;
-}
-
-h1 {
-  font-family: 'Bodoni Moda', serif;
-  font-size: 64px;
+p,
+li {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+  font-weight: 300;
   color: #9c5a3c;
 }
-.event-title-block {
-  text-align: center;
-  margin-bottom: 58px;
+
+a {
+  color: inherit;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #9c5a3c;
+  border-bottom: none;
+  backdrop-filter: blur(8px);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: #fffaf2;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-self: center;
+}
+
+.nav-links a,
+.language-switch {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fffaf2;
+}
+
+.nav-links a:hover {
+  color: #f7f1e8;
+}
+
+.language-switch {
+  justify-self: end;
+  color: #fffaf2;
+}
+
+.language-switch a {
+  text-decoration: none;
+  color: #fffaf2;
+  margin: 0 4px;
+}
+
+.language-switch a:hover {
+  color: #f7f1e8;
+}
+
+
+/* ================================
+   EVENT HERO
+================================ */
+
+.event-hero {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 105px clamp(48px, 7vw, 110px) 58px clamp(72px, 8vw, 130px);
 }
 
 .event-kicker {
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  color: #5D786E;
-  margin-bottom: 22px;
+  color: #9c5a3c;
+  margin-bottom: 30px;
 }
 
-.event-title-line {
-  width: 70px;
-  height: 1px;
-  background: #d8c4b3;
-  margin: 0 auto 30px;
+.event-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(82px, 11vw, 170px);
+  font-weight: 500;
+  line-height: 0.84;
+  letter-spacing: -0.05em;
+  color: #9c5a3c;
+  margin: 0 0 72px;
 }
 
-.event-title-block h1 {
-  font-family: 'Bodoni Moda', serif;
-  font-size: 86px;
+.event-title span {
+  display: block;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 42px;
+  border-top: 1px solid rgba(156, 90, 60, 0.38);
+  padding-top: 26px;
+}
+
+.detail-item span {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #9c5a3c;
+  margin-bottom: 14px;
+}
+
+.detail-item p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+
+/* ================================
+   WELCOME WAVE BANNER
+================================ */
+
+.welcome-marquee {
+  overflow: hidden;
+  width: 100%;
+  background: transparent;
+  padding: 0 0 26px;
+  margin: 0;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.welcome-wave-banner {
+  display: block;
+  width: 100%;
+  height: 145px;
+  overflow: visible;
+}
+
+.welcome-wave-banner text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 30px;
   font-weight: 400;
-  line-height: 0.95;
+  fill: #9c5a3c;
+  letter-spacing: 0.02em;
+}
+
+
+/* ================================
+   INTRO SECTION
+================================ */
+
+.event-intro {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 78px clamp(48px, 7vw, 110px) 88px clamp(72px, 8vw, 130px);
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(64px, 7vw, 118px);
+  font-weight: 500;
+  line-height: 0.86;
+  letter-spacing: -0.04em;
   color: #9c5a3c;
   margin: 0;
 }
 
-.event-title-block h1 span {
+.section-title span {
   display: block;
 }
 
-.event-date {
-  font-family: Avenir, sans-serif;
-  font-size: 14px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #8a9681;
-  margin-bottom: 40px;
+.intro-main {
+  display: grid;
+  grid-template-columns: 1fr 285px;
+  gap: 46px;
+  align-items: start;
 }
 
-.event-detail-label {
-  color: #5D786E;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 14px;
-  font-weight: 800;
+.intro-copy p {
+  margin: 0 0 22px;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.intro-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.intro-photo {
+  width: 100%;
+  max-width: 285px;
+  justify-self: end;
+}
+
+.intro-photo img {
+  width: 100%;
+  display: block;
+  filter: grayscale(100%) contrast(0.96) brightness(1.04);
+}
+
+
+/* ================================
+   QUOTE SECTION
+================================ */
+
+.quote-section {
+  width: 100%;
+  padding: 82px clamp(32px, 7vw, 110px);
+  background: transparent;
+}
+
+.quote-section p {
+  max-width: 980px;
+  margin: 0 auto;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(34px, 4vw, 62px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  text-align: center;
+  color: #9c5a3c;
+}
+
+
+/* ================================
+   EVENT INFO COLUMNS
+================================ */
+
+.event-info {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 88px clamp(48px, 7vw, 110px) 92px clamp(72px, 8vw, 130px);
+}
+
+.event-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.info-column {
+  padding: 0;
+}
+
+.info-number {
+  display: block;
+  padding-bottom: 20px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid rgba(156, 90, 60, 0.38);
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #9c5a3c;
+}
+
+.info-column h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 3vw, 46px);
+  font-weight: 500;
+  line-height: 1;
+  color: #9c5a3c;
+  margin: 0 0 24px;
+}
+
+.info-column p {
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0 0 20px;
+}
+
+.dress-code-mini-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #9c5a3c;
+  margin: 0 0 12px;
 }
 
 .palette-strip {
   display: grid;
-  grid-template-columns: repeat(4, 48px);
-  gap: 12px;
-  justify-content: center;
-  margin: 28px auto 20px;
+  grid-template-columns: repeat(4, 38px);
+  gap: 10px;
+  margin: 28px 0 0;
 }
 
 .palette-strip div {
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  border: 1px solid #d8c4b3;
-  box-sizing: border-box;
+  border: 1px solid rgba(156, 90, 60, 0.28);
 }
 
-.content-section {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
-.quote-section {
-  background: #fbf8f3;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  padding: 50px 40px 50px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.quote-section p {
-  position: relative;
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 40px;
-  line-height: 1.35;
-  text-align: center;
-  color: #9c5a3c;
-  max-width: 950px;
-  margin: 0 auto;
-  font-weight: 400;
-}
-
-.quote-section p::before,
-.quote-section p::after {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 72px;
-  line-height: 0;
-  color: rgba(156, 90, 60, 0.28);
-  position: relative;
-}
-
-.quote-section p::before {
-  content: "“";
-  top: 18px;
-  margin-right: 10px;
-}
-
-.quote-section p::after {
-  content: "”";
-  top: 22px;
-  margin-left: 10px;
-}
-
-h2 {
-  font-family: 'Inter', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #5D786E;
-  margin-top: 40px;
+.mini-tip {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
   margin-bottom: 24px;
 }
 
-.content-section h2:first-child {
-  margin-top: 0;
+.mini-tip img {
+  display: none;
 }
 
-p, li {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 22px;
-  line-height: 1.6;
+.mini-tip h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #9c5a3c;
+  margin: 0;
+}
+
+.mini-tip p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+
+/* ================================
+   GALLERY
+================================ */
+
+.gallery-section {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 86px clamp(48px, 7vw, 110px) 90px clamp(72px, 8vw, 130px);
+}
+
+.gallery-header {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 90px;
+  align-items: end;
+  margin-bottom: 72px;
+}
+
+.gallery-header .section-title {
+  max-width: 620px;
+}
+
+.gallery-intro {
+  max-width: 620px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.75;
 }
 
 .gallery {
-  max-width: 1100px;
-  margin: 0 auto;
   column-count: 3;
   column-gap: 18px;
 }
@@ -201,168 +434,26 @@ p, li {
   filter: saturate(0.92) contrast(0.96);
 }
 
-.placeholder {
-  height: 340px;
-  background: #eaded1;
-  border: 1px solid #d8c4b3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #8b4a32;
-}
 
-.tips-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 30px;
-}
+/* ================================
+   BACK LINK
+================================ */
 
-.tip-card {
-  background: #fbf6ef;
-  border-left: 3px solid #8a9681;
-  padding: 32px;
-}
-
-.tip-number {
-  font-family: 'Bodoni Moda', serif;
-  font-size: 32px;
-  color: #8a9681;
-  margin-bottom: 20px;
-  line-height: 1;
-}
-
-.tip-card h3 {
-  font-family: 'Bodoni Moda', serif;
-  font-size: 24px;
-  font-weight: 400;
-  color: #9c5a3c;
-  margin-bottom: 12px;
-}
-
-.tip-card p {
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.8;
-}
-
-.tips-list {
-  margin-top: 28px;
-  display: grid;
-  gap: 34px;
-}
-
-.tip-row {
-  display: grid;
-  grid-template-columns: 54px 1fr;
-  gap: 22px;
-  align-items: start;
-}
-
-.tip-icon {
-  font-family: 'Bodoni Moda', serif;
-  font-size: 36px;
-  color: #5f6f5b;
-  line-height: 1;
+.bottom-actions {
   text-align: center;
-}
-
-.tip-icon img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  opacity: 0.8;
-}
-
-.tip-row h3 {
-  font-family: Avenir, sans-serif;
-  font-size: 17px;
-  font-weight: 500;
-  color: #4d4d4d;
-  margin: 0 0 6px;
-}
-
-.tip-row p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.practical-section {
-  background: #fdfaf5;
-  padding: 48px;
-  margin: 60px 0;
-  border-left: 1px solid #d8c4b3;
-}
-
-.practical-layout {
-  display: grid;
-  grid-template-columns: 40px 1fr;
-  gap: 60px;
-  align-items: stretch;
-}
-
-.vertical-line {
-  width: 1px;
-  background: #c6d0cb;
-  height: 100%;
-  justify-self: center;
-}
-
-.practical-tips {
-  display: grid;
-  gap: 46px;
-}
-
-.practical-tip {
-  display: grid;
-  grid-template-columns: 90px 1fr;
-  gap: 36px;
-  align-items: center;
-}
-
-.tip-icon img {
-  width: 58px;
-  height: 58px;
-  object-fit: contain;
-  opacity: 0.85;
-}
-
-.practical-tip h3 {
-  font-family: Avenir, sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  color: #333333;
-  margin: 0 0 8px;
-}
-
-.practical-tip p {
-  font-size: 16px;
-  line-height: 1.7;
-  margin: 0;
-}
-
-.dress-code-block {
-  background: #fbf8f3;
-  padding: 44px;
-  margin: 60px 0;
-  border: 1px solid #e6d8c8;
+  padding: 10px 24px 90px;
 }
 
 .back-link {
-  display: block;
-  width: fit-content;
-  margin: 40px auto 20px;
-  padding: 14px 26px;
+  display: inline-block;
+  padding: 15px 34px;
   border: 1px solid #9c5a3c;
   border-radius: 999px;
-
   font-family: 'Inter', sans-serif;
   font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 2px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-
   color: #9c5a3c;
   text-decoration: none;
   transition: all 0.25s ease;
@@ -370,467 +461,440 @@ p, li {
 
 .back-link:hover {
   background: #9c5a3c;
-  color: #fbf8f3;
+  color: #fffaf2;
 }
 
-.quote-line {
-  width: 60px;
-  height: 1px;
+
+/* ================================
+   FOOTER + BACK TO TOP
+================================ */
+
+footer {
+  text-align: center;
+  padding: 40px;
   background: #8a9681;
-  margin: 0 auto 30px;
-}
-
-.quote-line:last-child {
-  margin: 30px auto 0;
-}
-
-.soft-block {
-  background: #fbf8f3;
-  border: 1px solid #e6d8c8;
-  padding: 42px;
-  margin: 50px 0;
-}
-
-.soft-block h2 {
-  margin-top: 0;
-}
-
-.three-column-section {
-  max-width: 1100px;
-  margin: 30px auto 20px;
-  padding: 22px 40px 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-}
-
-.info-column {
-  padding: 0 32px;
-}
-
-.info-column:not(:last-child) {
-  border-right: 1px solid #d8c4b3;
-}
-
-.info-column:first-child {
-  padding-left: 20px;
-}
-
-.info-column:last-child {
-  padding-right: 20px;
-}
-
-.info-column h2 {
-  font-family: 'Inter', sans-serif;
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #5D786E;
-  margin-top: 0;
-  margin-bottom: 24px;
-}
-
-.info-column:nth-child(2) {
-  text-align: center;
-}
-
-.info-column:nth-child(2) .palette-strip {
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.info-column p {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.8;
-  color: #6a665f;
-}
-
-.mini-tip {
-  display: grid;
-  grid-template-columns: 34px 1fr;
-  gap: 16px;
-  margin-bottom: 24px;
-}
-
-.mini-tip img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  opacity: 0.8;
-}
-
-.mini-tip h3 {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #4f4f4f;
-  margin: 0 0 4px;
-}
-
-.mini-tip p {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  font-weight: 300;
-  line-height: 1.7;
-  color: #6a665f;
-  margin: 0;
-}
-
-.dress-code-mini-title {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #4f4f4f;
-  margin: 0 0 8px;
-  text-align: center;
-}
-
-.details-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  width: 100%;
-  margin: 40px 0 50px;
-  border-top: 1px solid #d8c4b3;
-  border-bottom: 1px solid #d8c4b3;
-}
-
-.detail-item {
-  padding: 22px 24px;
-  position: relative;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.detail-item:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 22px;
-  bottom: 22px;
-  right: 0;
-  width: 1px;
-  background: #d8c4b3;
-}
-
-.detail-item span {
-  display: block;
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #5D786E;
-  margin-bottom: 12px;
-}
-
-.detail-item p {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.55;
-  color: #6a665f;
-}
-
-.details-grid .detail-item img.detail-icon {
-  object-fit: contain !important;
-  display: block !important;
-  margin: 0 auto 14px !important;
-}
-
-.details-grid .detail-item img.icon-location {
-  width: 30px !important;
-  height: 30px !important;
-  max-width: 30px !important;
-  max-height: 30px !important;
-  opacity: 0.75 !important;
-}
-
-.details-grid .detail-item img.icon-time {
-  width: 18px !important;
-  height: 18px !important;
-  max-width: 18px !important;
-  max-height: 18px !important;
-  opacity: 0.45 !important;
-}
-
-.details-grid .detail-item img.icon-transport {
-  width: 22px !important;
-  height: 22px !important;
-  max-width: 22px !important;
-  max-height: 22px !important;
-  opacity: 0.6 !important;
-}
-
-.details-grid .detail-item img.icon-dress {
-  width: 22px !important;
-  height: 22px !important;
-  max-width: 22px !important;
-  max-height: 22px !important;
-  opacity: 0.65 !important;
-}
-.intro-feature {
-  max-width: 1100px;
-  margin: 45px auto 55px;
-  padding: 0 40px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 285px;
-  gap: 46px;
-  align-items: start;
-}
-
-.intro-copy {
-  max-width: none;
-  margin: 0;
-  padding: 0;
-}
-
-.intro-copy p {
-  font-family: 'Inter', sans-serif !important;
-  font-size: 17px !important;
-  font-weight: 300 !important;
-  line-height: 1.85 !important;
-  color: #6a665f !important;
-  margin: 0 0 16px !important;
-  letter-spacing: 0.01em;
-}
-
-.intro-copy p:last-child {
-  margin-bottom: 0 !important;
-}
-
-.intro-photo img {
-  width: 285px;
-  height: auto;
-  max-height: 320px;
-  object-fit: contain;
-  display: block;
-  filter: grayscale(100%) contrast(0.95) brightness(1.03);
-}
-
-.gallery-title {
-  font-family: 'Inter', sans-serif;
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #5D786E;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 36px;
-}
-
-html {
-  scroll-behavior: smooth;
+  color: #fffaf2;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .scroll-top {
   position: fixed;
-  right: 28px;
-  bottom: 28px;
-  width: 44px;
-  height: 44px;
-  border: 1px solid #9c5a3c;
+  right: 24px;
+  bottom: 24px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: #9c5a3c;
-  color: #fbf8f3;
+  color: #fffaf2;
   text-decoration: none;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-family: 'Inter', sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-
-  transition: all 0.25s ease;
-  z-index: 999;
+  font-size: 22px;
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 
 .scroll-top:hover {
-  background: #fbf8f3;
-  color: #9c5a3c;
+  background: #8b4a32;
+  transform: translateY(-3px);
 }
 
-</style>
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 900px) {
+  .nav-container {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .logo,
+  .nav-links,
+  .language-switch {
+    justify-self: center;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a,
+  .language-switch {
+    font-size: 12px;
+  }
+
+  .event-hero {
+    padding: 72px 28px 40px;
+  }
+
+  .event-title {
+    font-size: clamp(64px, 18vw, 100px);
+    margin-bottom: 48px;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .detail-item {
+    padding: 24px 0;
+    border-top: 1px solid rgba(156, 90, 60, 0.38);
+  }
+
+  .detail-item:last-child {
+    border-bottom: 1px solid rgba(156, 90, 60, 0.38);
+  }
+
+  .welcome-wave-banner {
+    height: 120px;
+  }
+
+  .welcome-wave-banner text {
+    font-size: 26px;
+  }
+
+  .event-intro {
+    display: block;
+    padding: 64px 28px 72px;
+  }
+
+  .section-title {
+    font-size: clamp(58px, 18vw, 86px);
+    margin-bottom: 44px;
+  }
+
+  .intro-main {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .intro-photo {
+    max-width: 100%;
+    justify-self: start;
+  }
+
+  .quote-section {
+    padding: 68px 28px;
+  }
+
+  .quote-section p {
+    font-size: clamp(32px, 11vw, 46px);
+  }
+
+  .event-info {
+    padding: 72px 28px;
+  }
+
+  .event-info-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .info-column {
+    padding: 30px 0 34px;
+  }
+
+  .info-number {
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+  }
+
+  .info-column h2 {
+    font-size: 36px;
+  }
+
+  .gallery-section {
+    padding: 72px 28px 76px;
+  }
+
+  .gallery-header {
+    display: block;
+    margin-bottom: 48px;
+  }
+
+  .gallery-intro {
+    font-size: 17px;
+  }
+
+  .gallery {
+    column-count: 2;
+  }
+
+  .bottom-actions {
+    padding-bottom: 76px;
+  }
+}
+
+@media (max-width: 560px) {
+  .gallery {
+    column-count: 1;
+  }
+}
+  </style>
 </head>
 
 <body id="top">
 
-<div class="container">
+<nav>
+  <div class="nav-container">
 
-  <div class="event-title-block split-title">
-  <div class="event-kicker">Friday, 18 June 2027</div>
-  <div class="event-title-line"></div>
+    <a class="logo" href="index.html">M & S</a>
 
-  <h1>
-    <span>Welcome Event</span>
-  </h1>
-</div>
-
-<div class="details-grid">
-
-  <div class="detail-item">
-    <img class="detail-icon icon-location" src="https://static.thenounproject.com/png/8383431-200.png" alt="">
-    <span>Location</span>
-    <p>Surprise mountain setting</p>
-  </div>
-
-  <div class="detail-item">
-    <img class="detail-icon icon-time" src="https://static.thenounproject.com/png/time-icon-8410596-512.png" alt="">
-    <span>Time</span>
-    <p>15:15 departure until 19:00</p>
-  </div>
-
-  <div class="detail-item">
-    <img class="detail-icon icon-transport" src="https://static.thenounproject.com/png/bus-icon-7670642-512.png" alt="">
-    <span>Transportation</span>
-    <p>Provided from the hotel</p>
-  </div>
-
-  <div class="detail-item">
-    <img class="detail-icon icon-dress" src="https://static.thenounproject.com/png/clothing-hanger-icon-8045296-512.png" alt="">
-    <span>Dress Code</span>
-    <p>Mountain Chic</p>
-  </div>
-
-</div>
-
-<div class="intro-feature">
-
-<div class="intro-copy">
-  <p>
-    We couldn't imagine a better way to begin our wedding weekend than by welcoming you
-    to the mountains of the Sacred Valley.
-  </p>
-
-  <p>
-    Surrounded by breathtaking views and the natural beauty of the Andes, we'll spend the
-    evening celebrating with the people we love most. The setting is outdoors and intentionally
-    relaxed, allowing everyone to settle in, reconnect, and soak in the magic of Peru before
-    the wedding day.
-  </p>
-
-  <p>
-    As the evening unfolds, temperatures may cool, so we recommend bringing a jacket, shawl,
-    or extra layer.
-  </p>
-</div>
-
-  <div class="intro-photo">
-    <img src="images/marije-sophia-bw.jpeg" alt="Marije and Sophia">
-  </div>
-
-</div>
-
-<div class="quote-section">
-  <p>
-    From Amsterdam to the Andes, Egypt to Malaysia, Norway to the United States,
-    and many places in between—thank you for making the journey to celebrate with us.
-  </p>
-</div>
-
-</div>
-
-<div class="three-column-section">
-
-  <div class="info-column">
-    <h2>Transportation</h2>
-    <p>
-      Transportation will be provided for all guests staying at Sonesta Posadas del Inca Yucay.
-    </p>
-    <p>
-      Guests are kindly requested to gather in front of the hotel by 15:15 for departure.
-      The journey to the location takes approximately 25 minutes.
-    </p>
-    <p>
-      Return transportation to the hotel will also be provided at the end of the evening.
-    </p>
-  </div>
-
-  <div class="info-column">
-    <h2>Dress Code</h2>
-    
-<h3 class="dress-code-mini-title">Mountain Chic</h3>
-
-<p>
-  Think relaxed elegance with an adventurous spirit.
-</p>
-
-    <div class="palette-strip">
-  <div style="background:#C6A27E;"></div>
-  <div style="background:#4F6378;"></div>
-  <div style="background:#6E2F3A;"></div>
-  <div style="background:#B56A4C;"></div>
-  <div style="background:#F7F1E8;"></div>
-  <div style="background:#D7CEC1;"></div>
-  <div style="background:#6E7153;"></div>
-  <div style="background:#5A4335;"></div>
-</div>
-
-  </div>
-
-  <div class="info-column">
-    <h2>Practical Tips</h2>
-
-    <div class="mini-tip">
-      <img src="https://static.thenounproject.com/png/winter-icon-8189963-512.png" alt="">
-      <div>
-        <h3>Warm Layers</h3>
-        <p>Evenings in the mountains can cool down quickly after sunset.</p>
-      </div>
+    <div class="nav-links">
+      <a href="index.html#wedding-weekend">Wedding Weekend</a>
+      <a href="index.html#travel">Travel</a>
+      <a href="index.html#explore">Explore Peru</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#rsvp">RSVP</a>
     </div>
 
-    <div class="mini-tip">
-      <img src="https://static.thenounproject.com/png/8383431-200.png" alt="">
-      <div>
-        <h3>Outdoor Setting</h3>
-        <p>Celebrate beneath open skies and spectacular Andean views.</p>
-      </div>
-    </div>
-
-    <div class="mini-tip">
-      <img src="https://static.thenounproject.com/png/boots-icon-8404248-512.png" alt="">
-      <div>
-        <h3>Comfortable Footwear</h3>
-        <p>Choose shoes that allow you to move comfortably throughout the evening.</p>
-      </div>
+    <div class="language-switch">
+      <a href="#">EN</a>
+      <span>|</span>
+      <a href="#">ES</a>
     </div>
 
   </div>
+</nav>
 
-</div>
-  <h2 class="gallery-title">Inspiration Gallery</h2>
+<main>
 
- <div class="gallery">
+  <section class="event-hero">
+    <div class="event-kicker">Friday, 18 June 2027</div>
 
-  <img src="images/welcome-inspiration-1.jpg" alt="Mountain chic inspiration">
-  <img src="images/welcome-inspiration-2.jpg" alt="Sacred Valley evening inspiration">
-  <img src="images/welcome-inspiration-3.jpg" alt="Outdoor dinner inspiration">
-  <img src="images/welcome-inspiration-4.jpg" alt="Earth tone dress code inspiration">
-  <img src="images/welcome-inspiration-5.jpg" alt="Andean landscape inspiration">
-  <img src="images/welcome-inspiration-6.jpg" alt="Welcome event atmosphere inspiration">
-  <img src="images/welcome-inspiration-7.jpg" alt="Welcome event inspiration">
-  <img src="images/welcome-inspiration-8.jpg" alt="Welcome event inspiration">
-  <img src="images/welcome-inspiration-9.jpg" alt="Welcome event inspiration">
- <img src="images/welcome-inspiration-10.jpg" alt="Welcome event inspiration">
-  <img src="images/welcome-inspiration-11.jpg" alt="Welcome event inspiration">
-  <img src="images/welcome-inspiration-12.jpg" alt="Welcome event inspiration">
-  <img src="images/welcome-inspiration-13.jpg" alt="Welcome event inspiration">
-  <img src="images/welcome-inspiration-14.jpg" alt="Welcome event inspiration">
-  <img src="images/welcome-inspiration-15.jpg" alt="Welcome event inspiration">
- <img src="images/welcome-inspiration-16.jpg" alt="Welcome event inspiration">
-  <img src="images/welcome-inspiration-17.jpg" alt="Welcome event inspiration">
-  <img src="images/welcome-inspiration-18.jpg" alt="Welcome event inspiration">
+    <h1 class="event-title">
+      <span>Welcome</span>
+      <span>Event</span>
+    </h1>
 
-</div>
+    <div class="details-grid">
 
-<a class="back-link" href="index.html">← Back to Wedding Website</a>
+      <div class="detail-item">
+        <span>Location</span>
+        <p>Surprise mountain setting</p>
+      </div>
+
+      <div class="detail-item">
+        <span>Time</span>
+        <p>15:15 departure until 19:00</p>
+      </div>
+
+      <div class="detail-item">
+        <span>Transportation</span>
+        <p>Provided from the hotel</p>
+      </div>
+
+      <div class="detail-item">
+        <span>Dress Code</span>
+        <p>Mountain Chic</p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="welcome-marquee">
+    <svg class="welcome-wave-banner" viewBox="0 0 1400 150" aria-hidden="true">
+      <defs>
+        <path id="welcome-wave"
+          d="M -900 82
+             C -720 12, -540 152, -360 82
+             S 0 12, 180 82
+             S 540 152, 720 82
+             S 1080 12, 1260 82
+             S 1620 152, 1800 82
+             S 2160 12, 2340 82
+             S 2700 152, 2880 82
+             S 3240 12, 3420 82" />
+      </defs>
+
+      <text xml:space="preserve">
+        <textPath href="#welcome-wave" startOffset="0">
+          <animate
+            attributeName="startOffset"
+            from="0"
+            to="-360"
+            dur="6s"
+            repeatCount="indefinite"
+            calcMode="linear" />
+          Welcome to the Andes     ♥     Mountain Chic     ♥     Welcome to the Andes     ♥     Mountain Chic     ♥     Welcome to the Andes     ♥     Mountain Chic     ♥     Welcome to the Andes     ♥     Mountain Chic     ♥     Welcome to the Andes     ♥
+        </textPath>
+      </text>
+    </svg>
+  </div>
+
+  <section class="event-intro">
+
+    <h2 class="section-title">
+      <span>An</span>
+      <span>Evening</span>
+      <span>In The</span>
+      <span>Mountains</span>
+    </h2>
+
+    <div class="intro-main">
+
+      <div class="intro-copy">
+        <p>
+          We couldn't imagine a better way to begin our wedding weekend than by welcoming you
+          to the mountains of the Sacred Valley.
+        </p>
+
+        <p>
+          Surrounded by breathtaking views and the natural beauty of the Andes, we'll spend the
+          evening celebrating with the people we love most. The setting is outdoors and intentionally
+          relaxed, allowing everyone to settle in, reconnect, and soak in the magic of Peru before
+          the wedding day.
+        </p>
+
+        <p>
+          As the evening unfolds, temperatures may cool, so we recommend bringing a jacket, shawl,
+          or extra layer.
+        </p>
+      </div>
+
+      <div class="intro-photo">
+        <img src="images/marije-sophia-bw.jpeg" alt="Marije and Sophia">
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="quote-section">
+    <p>
+      From Amsterdam to the Andes, Egypt to Malaysia, Norway to the United States,
+      and many places in between—thank you for making the journey to celebrate with us.
+    </p>
+  </section>
+
+  <section class="event-info">
+
+    <div class="event-info-grid">
+
+      <div class="info-column">
+        <div class="info-number">01</div>
+
+        <h2>Transportation</h2>
+
+        <p>
+          Transportation will be provided for all guests staying at Sonesta Posadas del Inca Yucay.
+        </p>
+
+        <p>
+          Guests are kindly requested to gather in front of the hotel by 15:15 for departure.
+          The journey to the location takes approximately 25 minutes.
+        </p>
+
+        <p>
+          Return transportation to the hotel will also be provided at the end of the evening.
+        </p>
+      </div>
+
+      <div class="info-column">
+        <div class="info-number">02</div>
+
+        <h2>Dress Code</h2>
+
+        <h3 class="dress-code-mini-title">Mountain Chic</h3>
+
+        <p>
+          Think relaxed elegance with an adventurous spirit.
+        </p>
+
+        <div class="palette-strip">
+          <div style="background:#C6A27E;"></div>
+          <div style="background:#4F6378;"></div>
+          <div style="background:#6E2F3A;"></div>
+          <div style="background:#B56A4C;"></div>
+          <div style="background:#F7F1E8;"></div>
+          <div style="background:#D7CEC1;"></div>
+          <div style="background:#6E7153;"></div>
+          <div style="background:#5A4335;"></div>
+        </div>
+      </div>
+
+      <div class="info-column">
+        <div class="info-number">03</div>
+
+        <h2>Practical Tips</h2>
+
+        <div class="mini-tip">
+          <h3>Warm Layers</h3>
+          <p>Evenings in the mountains can cool down quickly after sunset.</p>
+        </div>
+
+        <div class="mini-tip">
+          <h3>Outdoor Setting</h3>
+          <p>Celebrate beneath open skies and spectacular Andean views.</p>
+        </div>
+
+        <div class="mini-tip">
+          <h3>Comfortable Footwear</h3>
+          <p>Choose shoes that allow you to move comfortably throughout the evening.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="gallery-section">
+
+    <div class="gallery-header">
+      <h2 class="section-title">
+        <span>Inspiration</span>
+        <span>Gallery</span>
+      </h2>
+
+      <p class="gallery-intro">
+        A little visual moodboard for the evening: mountain views, relaxed elegance,
+        earthy colors, and festive details for our welcome event in the Sacred Valley.
+      </p>
+    </div>
+
+    <div class="gallery">
+
+      <img src="images/welcome-inspiration-1.jpg" alt="Mountain chic inspiration">
+      <img src="images/welcome-inspiration-2.jpg" alt="Sacred Valley evening inspiration">
+      <img src="images/welcome-inspiration-3.jpg" alt="Outdoor dinner inspiration">
+      <img src="images/welcome-inspiration-4.jpg" alt="Earth tone dress code inspiration">
+      <img src="images/welcome-inspiration-5.jpg" alt="Andean landscape inspiration">
+      <img src="images/welcome-inspiration-6.jpg" alt="Welcome event atmosphere inspiration">
+      <img src="images/welcome-inspiration-7.jpg" alt="Welcome event inspiration">
+      <img src="images/welcome-inspiration-8.jpg" alt="Welcome event inspiration">
+      <img src="images/welcome-inspiration-9.jpg" alt="Welcome event inspiration">
+      <img src="images/welcome-inspiration-10.jpg" alt="Welcome event inspiration">
+      <img src="images/welcome-inspiration-11.jpg" alt="Welcome event inspiration">
+      <img src="images/welcome-inspiration-12.jpg" alt="Welcome event inspiration">
+      <img src="images/welcome-inspiration-13.jpg" alt="Welcome event inspiration">
+      <img src="images/welcome-inspiration-14.jpg" alt="Welcome event inspiration">
+      <img src="images/welcome-inspiration-15.jpg" alt="Welcome event inspiration">
+      <img src="images/welcome-inspiration-16.jpg" alt="Welcome event inspiration">
+      <img src="images/welcome-inspiration-17.jpg" alt="Welcome event inspiration">
+      <img src="images/welcome-inspiration-18.jpg" alt="Welcome event inspiration">
+
+    </div>
+
+  </section>
+
+  <div class="bottom-actions">
+    <a class="back-link" href="index.html">← Back to Wedding Website</a>
+  </div>
+
+</main>
+
+<footer>
+  Marije & Sophia · Sacred Valley, Peru · 18–20 June 2027
+</footer>
 
 <a href="#top" class="scroll-top" aria-label="Back to top">↑</a>
 
