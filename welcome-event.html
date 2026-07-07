@@ -214,9 +214,8 @@ nav {
   letter-spacing: 0.02em;
 }
 
-.welcome-mountain-icons {
-  fill: #9c5a3c;
-  opacity: 0.85;
+.welcome-mountain-track {
+  opacity: 0.9;
 }
 
 /* ================================
@@ -758,8 +757,8 @@ footer {
            S 2700 152, 2880 82
            S 3240 12, 3420 82" />
 
-      <symbol id="mountain-icon-inline" viewBox="0 0 64 64">
-        <path d="M6 50 L25 18 L38 39 L45 28 L58 50 Z" />
+      <symbol id="welcome-mountain-shape" viewBox="0 0 64 64">
+        <path d="M6 50 L25 18 L38 39 L45 28 L58 50 Z" fill="#9c5a3c" />
         <path d="M25 18 L31 30 L22 27 Z" fill="#f7f1e8" />
         <path d="M45 28 L49 36 L41 34 Z" fill="#f7f1e8" />
       </symbol>
@@ -769,8 +768,8 @@ footer {
       <textPath href="#welcome-wave" startOffset="0">
         <animate
           attributeName="startOffset"
-          from="0"
-          to="-360"
+          values="0;-360"
+          keyTimes="0;1"
           dur="6s"
           repeatCount="indefinite"
           calcMode="linear" />
@@ -778,22 +777,22 @@ footer {
       </textPath>
     </text>
 
-    <g class="welcome-mountain-icons">
+    <g class="welcome-mountain-track">
       <animateTransform
         attributeName="transform"
         type="translate"
-        from="0 0"
-        to="-360 0"
+        values="0 0; -360 0"
+        keyTimes="0;1"
         dur="6s"
         repeatCount="indefinite"
         calcMode="linear" />
 
-      <use href="#mountain-icon-inline" x="285" y="58" width="30" height="30" />
-      <use href="#mountain-icon-inline" x="585" y="58" width="30" height="30" />
-      <use href="#mountain-icon-inline" x="885" y="58" width="30" height="30" />
-      <use href="#mountain-icon-inline" x="1185" y="58" width="30" height="30" />
-      <use href="#mountain-icon-inline" x="1485" y="58" width="30" height="30" />
-      <use href="#mountain-icon-inline" x="1785" y="58" width="30" height="30" />
+      <use href="#welcome-mountain-shape" x="285" y="58" width="28" height="28" />
+      <use href="#welcome-mountain-shape" x="585" y="58" width="28" height="28" />
+      <use href="#welcome-mountain-shape" x="885" y="58" width="28" height="28" />
+      <use href="#welcome-mountain-shape" x="1185" y="58" width="28" height="28" />
+      <use href="#welcome-mountain-shape" x="1485" y="58" width="28" height="28" />
+      <use href="#welcome-mountain-shape" x="1785" y="58" width="28" height="28" />
     </g>
   </svg>
 </div>
