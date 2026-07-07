@@ -214,10 +214,10 @@ nav {
   letter-spacing: 0.02em;
 }
 
-.welcome-mountain-icons image {
+.welcome-mountain-icons {
+  fill: #9c5a3c;
   opacity: 0.85;
 }
-
 
 /* ================================
    INTRO SECTION
@@ -569,8 +569,8 @@ footer {
 }
 
 .welcome-mountain-icons image {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
 }
   .event-intro {
     display: block;
@@ -746,12 +746,6 @@ footer {
 
 <div class="welcome-marquee">
   <svg class="welcome-wave-banner" viewBox="0 0 1400 150" aria-hidden="true">
-<style>
-  * {
-    fill: #9c5a3c !important;
-    stroke: #9c5a3c !important;
-  }
-</style>
     <defs>
       <path id="welcome-wave"
         d="M -900 82
@@ -763,6 +757,12 @@ footer {
            S 2160 12, 2340 82
            S 2700 152, 2880 82
            S 3240 12, 3420 82" />
+
+      <symbol id="mountain-icon-inline" viewBox="0 0 64 64">
+        <path d="M6 50 L25 18 L38 39 L45 28 L58 50 Z" />
+        <path d="M25 18 L31 30 L22 27 Z" fill="#f7f1e8" />
+        <path d="M45 28 L49 36 L41 34 Z" fill="#f7f1e8" />
+      </symbol>
     </defs>
 
     <text xml:space="preserve">
@@ -788,14 +788,15 @@ footer {
         repeatCount="indefinite"
         calcMode="linear" />
 
-      <image href="images/mountain-icon.svg.svg" x="285" y="64" width="28" height="28" />
-      <image href="images/mountain-icon.svg.svg" x="585" y="64" width="28" height="28" />
-      <image href="images/mountain-icon.svg.svg" x="885" y="64" width="28" height="28" />
-      <image href="images/mountain-icon.svg.svg" x="1185" y="64" width="28" height="28" />
-      <image href="images/mountain-icon.svg.svg" x="1485" y="64" width="28" height="28" />
-      <image href="images/mountain-icon.svg.svg" x="1785" y="64" width="28" height="28" />
+      <use href="#mountain-icon-inline" x="285" y="58" width="30" height="30" />
+      <use href="#mountain-icon-inline" x="585" y="58" width="30" height="30" />
+      <use href="#mountain-icon-inline" x="885" y="58" width="30" height="30" />
+      <use href="#mountain-icon-inline" x="1185" y="58" width="30" height="30" />
+      <use href="#mountain-icon-inline" x="1485" y="58" width="30" height="30" />
+      <use href="#mountain-icon-inline" x="1785" y="58" width="30" height="30" />
     </g>
   </svg>
+</div>
 </div>
 
   <section class="event-intro">
