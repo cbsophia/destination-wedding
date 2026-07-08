@@ -475,8 +475,101 @@ section.editorial-section {
   max-width: 520px;
 }
 
-#stay .editorial-copy {
-  max-width: 620px;
+.stay-content {
+  max-width: 680px;
+}
+
+.stay-content > p {
+  margin-top: 0;
+  margin-bottom: 26px;
+}
+
+.stay-photo {
+  margin: 38px 0 34px;
+}
+
+.stay-photo img {
+  width: 100%;
+  display: block;
+  max-height: 430px;
+  object-fit: cover;
+  filter: grayscale(8%) contrast(0.96) brightness(1.03);
+}
+
+.stay-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 30px 0 36px;
+}
+
+.stay-button {
+  display: inline-block;
+  padding: 13px 30px;
+  border: 1px solid #87ae73;
+  border-radius: 999px;
+  background: #87ae73;
+  color: #fffaf2;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.stay-button:hover {
+  background: #9c5a3c;
+  border-color: #9c5a3c;
+  color: #fffaf2;
+}
+
+.stay-button.secondary {
+  background: transparent;
+  border-color: #9c5a3c;
+  color: #9c5a3c;
+}
+
+.stay-button.secondary:hover {
+  background: #9c5a3c;
+  color: #fffaf2;
+}
+
+.reservation-note {
+  padding: 28px 30px;
+  background: #fffaf2;
+  border-left: 4px solid #87ae73;
+}
+
+.reservation-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #87ae73;
+  margin: 0 0 16px;
+}
+
+.reservation-note p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0 0 16px;
+}
+
+.reservation-note p:last-child {
+  margin-bottom: 0;
+}
+
+.reservation-note a {
+  color: #9c5a3c;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.reservation-note a:hover {
+  color: #87ae73;
 }
 
 
@@ -692,6 +785,28 @@ section.editorial-section {
   font-weight: 300;
   margin: 0 0 30px;
 }
+
+  .stay-photo {
+    margin: 30px 0 28px;
+  }
+
+  .stay-photo img {
+    max-height: none;
+  }
+
+  .stay-actions {
+    display: block;
+    margin: 26px 0 30px;
+  }
+
+  .stay-button {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .reservation-note {
+    padding: 24px 22px;
+  }
 
 .rsvp-button {
   display: inline-block;
@@ -1165,20 +1280,44 @@ footer {
     <span>Us</span>
   </h2>
 
-  <div class="editorial-content editorial-copy">
+  <div class="editorial-content stay-content">
     <p>
-      Our wedding weekend will be centered around Sonesta Posadas del Inca Yucay,
-      a beautiful hotel in the heart of the Sacred Valley.
+      Our wedding day will take place at Sonesta Posadas del Inca Yucay,
+      in the heart of the Sacred Valley.
     </p>
 
     <p>
-      We encourage guests to stay here so we can enjoy the full weekend experience
-      together, from the welcome event to the farewell brunch.
+      We encourage guests to stay at Sonesta so you can be close to the celebrations
+      and enjoy the full weekend with us, from the welcome event to the farewell brunch.
     </p>
 
-    <p>
-      Booking information and special rates will be shared closer to the wedding.
-    </p>
+    <div class="stay-photo">
+      <img src="images/sonesta-yucay.jpg" alt="Sonesta Posadas del Inca Yucay">
+    </div>
+
+    <div class="stay-actions">
+      <a class="stay-button" href="https://www.sonesta.com/sonesta-posadas-del-inca/per/urubamba/sonesta-posadas-del-inca-sacred-valley-yucay" target="_blank" rel="noopener">
+        Hotel Website
+      </a>
+
+      <a class="stay-button secondary" href="https://www.google.com/maps/search/?api=1&query=Sonesta+Posadas+del+Inca+Yucay" target="_blank" rel="noopener">
+        Google Maps
+      </a>
+    </div>
+
+    <div class="reservation-note">
+      <p class="reservation-label">Reservations</p>
+
+      <p>
+        To book your accommodation, please send a reservation request by email to
+        <a href="mailto:email@example.com">email@example.com</a>
+        or call <a href="tel:+15555555555">(555) 555-5555</a>.
+      </p>
+
+      <p>
+        Please mention the <strong>“Sophia & Marije” wedding</strong> when making your reservation.
+      </p>
+    </div>
   </div>
 
 </section>
