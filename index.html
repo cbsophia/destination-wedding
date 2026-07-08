@@ -498,7 +498,7 @@ section.editorial-section {
 
 .stay-actions {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 12px;
   align-items: center;
@@ -576,6 +576,11 @@ section.editorial-section {
 
 .reservation-note a:hover {
   color: #87ae73;
+}
+
+.stay-highlight {
+  color: #9c5a3c;
+  font-weight: 600;
 }
 
 
@@ -1291,10 +1296,10 @@ footer {
   </h2>
 
   <div class="editorial-content stay-content">
-    <p>
-      Our wedding day will take place at Sonesta Posadas del Inca Yucay,
-      in the heart of the Sacred Valley.
-    </p>
+<p>
+  Our wedding day will take place at <span class="stay-highlight">Sonesta Posadas del Inca Yucay</span>,
+  in the heart of the Sacred Valley.
+</p>
 
     <p>
       We encourage guests to stay at Sonesta so you can be close to the celebrations
@@ -1314,9 +1319,9 @@ footer {
         or call <a href="tel:+15555555555">(555) 555-5555</a>.
       </p>
 
-      <p>
-        Please mention the <strong>“Sophia & Marije” wedding</strong> when making your reservation.
-      </p>
+     <p>
+  Please mention the <span class="stay-highlight">“Sophia & Marije” wedding</span> when making your reservation.
+</p>
     </div>
 
     <div class="stay-actions">
