@@ -499,22 +499,25 @@ section.editorial-section {
 .stay-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  margin: 30px 0 36px;
+  gap: 12px;
+  align-items: center;
+  margin: 22px 0 42px;
 }
 
 .stay-button {
-  display: inline-block;
-  padding: 13px 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 18px;
   border: 1px solid #87ae73;
   border-radius: 999px;
   background: #87ae73;
   color: #fffaf2;
   text-decoration: none;
   font-family: 'Inter', sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1.6px;
   text-transform: uppercase;
   text-align: center;
   transition: all 0.25s ease;
@@ -538,9 +541,11 @@ section.editorial-section {
 }
 
 .reservation-note {
-  padding: 28px 30px;
-  background: #fffaf2;
-  border-left: 4px solid #87ae73;
+  margin-top: 34px;
+  padding: 28px 0 0;
+  background: transparent;
+  border-top: 1px solid rgba(156, 90, 60, 0.38);
+  border-left: none;
 }
 
 .reservation-label {
@@ -794,14 +799,18 @@ section.editorial-section {
     max-height: none;
   }
 
-  .stay-actions {
-    display: block;
-    margin: 26px 0 30px;
+    .stay-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 22px 0 34px;
   }
 
   .stay-button {
-    width: 100%;
-    margin-bottom: 12px;
+    width: auto;
+    margin-bottom: 0;
+    padding: 9px 16px;
+    font-size: 10px;
   }
 
   .reservation-note {
